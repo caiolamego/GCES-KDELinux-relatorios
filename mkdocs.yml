@@ -3,6 +3,8 @@ theme:
   name: material
   language: pt-BR
 
+docs_dir: '.'
+
 nav:
   - Home: README.md
   - Geral:
