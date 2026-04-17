@@ -1,0 +1,11 @@
+site_name: GCES KDE Linux Relatórios
+theme:
+  name: material
+  language: pt-BR
+
+nav:
+  - Home: README.md
+  - Geral:
+    - Sprint 0: docs/sprint0.md
+  - Contribuições individuais:
+    - Caio Lamego: contribuicoes_individuais/caiolamego/diarioDeBordo.md
