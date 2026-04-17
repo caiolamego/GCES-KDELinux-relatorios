@@ -3,11 +3,9 @@ theme:
   name: material
   language: pt-BR
 
-docs_dir: '.'
-
 nav:
-  - Home: README.md
+  - Home: index.md
   - Geral:
-    - Sprint 0: docs/sprint0.md
+    - Sprint 0: sprint0.md
   - Contribuições individuais:
     - Caio Lamego: contribuicoes_individuais/caiolamego/diarioDeBordo.md
