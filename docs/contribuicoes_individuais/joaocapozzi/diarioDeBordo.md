@@ -54,14 +54,13 @@ Alteração do firmware da máquina de BIOS Legacy para **UEFI** (provido pelo p
 
 ## 6. Evidências da Execução
 
-![Configuração UEFI no Virt-Manager](./assets/img_vm1.jpeg)
+![Configuração UEFI no Virt-Manager](./assets/img_vm1.jpg)
 
 *Configuração do Firmware UEFI nas propriedades da VM.*
 
-![KDE Linux Executando](./assets/img_vm2.jpeg)
+![KDE Linux Executando](./assets/img_vm2.jpg)
 
 *KDE Linux rodando com sucesso após o boot inicial.*
-
 ---
 
 ### Plano Pessoal para a Próxima Sprint
