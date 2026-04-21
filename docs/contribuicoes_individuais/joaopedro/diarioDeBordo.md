@@ -16,8 +16,8 @@ Apesar dos erros de boot enfrentados, consegui avançar significativamente na co
 
 | Data  | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
 |------|----------|----------------------------------|----------------|--------|
-| 17/04 | Instalação do VirtualBox | Setup | https://www.virtualbox.org/wiki/Downloads | Concluído |
-| 18/04 | Download da imagem `.raw` do KDE Linux | Setup | https://kde.org/linux/docs/install-vm/ | Concluído |
+| 17/04 | Instalação do VirtualBox | Setup | [Link](https://www.virtualbox.org/wiki/Downloads) | Concluído |
+| 18/04 | Download da imagem `.raw` do KDE Linux | Setup |  [Link](https://kde.org/linux/docs/install-vm/) | Concluído |
 | 18/04 | Conversão de `.raw` para `.vmdk` com VBoxManage | Código | - | Concluído |
 | 19/04 | Criação da máquina virtual no VirtualBox | Setup | - | Concluído |
 | 19/04 | Configuração de EFI, disco e tentativa de boot | Setup | - | Concluído |
@@ -51,7 +51,7 @@ Apesar dos erros de boot enfrentados, consegui avançar significativamente na co
 
 Baixar o arquivo `.raw` do KDE Linux:
 
-https://kde.org/linux/docs/install-vm/
+ [Link](https://kde.org/linux/docs/install-vm/)
 
 
 ---
@@ -62,7 +62,7 @@ Instalar o VirtualBox no Windows.
 
 ---
 
-### 3. Conversão da imagem `.raw`
+### 3. Conversão da imagem `.raw` para VMDK
 
 ```powershell
 cd "C:\Program Files\Oracle\VirtualBox"
