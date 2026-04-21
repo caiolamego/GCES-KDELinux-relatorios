@@ -47,18 +47,20 @@ Apesar dos erros de boot enfrentados, consegui avançar significativamente na co
 
 ## Passo a Passo feito para Subir o KDE Linux no VirtualBox (Windows)
 
+---
+
 ### 1. Download da imagem
 
 Baixar o arquivo `.raw` do KDE Linux:
 
- [Link](https://kde.org/linux/docs/install-vm/)
+https://kde.org/linux/docs/install-vm/
 
 
 ---
 
 ### 2. Instalação do VirtualBox
 
-Instalar o VirtualBox no Windows.
+https://www.virtualbox.org/wiki/Downloads
 
 ---
 
