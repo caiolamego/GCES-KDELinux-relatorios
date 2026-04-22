@@ -24,4 +24,5 @@ O projeto escolhido para contribuição foi o ecossistema KDE, focando especific
 | Caio Magalhães Lamego | 222031045 | [@caiolamego](https://github.com/caiolamego) |
 | Victório Lázaro | 211031860 | [@Victor-oss](https://github.com/Victor-oss) |
 | João Pedro | 222006258 | [@JoaoPedrooSS](https://github.com/JoaoPedrooSS) |
-| Membro 4 | 123456789 | [@membro4](https://github.com/membro4) |
+| João Capozzi | 232027476 | [@jonas3688](https://github.com/jonas3688) |
+| Membro 5 | 123456789 | [@membro4](https://github.com/membro4) |
