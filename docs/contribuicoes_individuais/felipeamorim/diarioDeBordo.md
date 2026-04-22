@@ -108,8 +108,8 @@ Também seguindo as instruções do guia de desenvolvimento, criei um arquivo de
 
 ```
 [Content]
-Environment=LOCALE_GEN="C.UTF-8 UTF-8"
-Environment=MIRRORS_COUNTRY=br
+Environment=LOCALE_GEN="en_US.UTF-8 UTF-8"
+Environment=MIRRORS_COUNTRY=us
 Environment=PARALLEL_DOWNLOADS=50
 ```
 
