@@ -25,4 +25,4 @@ O projeto escolhido para contribuição foi o ecossistema KDE, focando especific
 | Victório Lázaro | 211031860 | [@Victor-oss](https://github.com/Victor-oss) |
 | João Pedro | 222006258 | [@JoaoPedrooSS](https://github.com/JoaoPedrooSS) |
 | João Capozzi | 232027476 | [@jonas3688](https://github.com/jonas3688) |
-| Membro 5 | 123456789 | [@membro4](https://github.com/membro4) |
+|  Arthur Gomes Oliveira | 232013917 | [@arthurgomes1290](https://github.com/arthurgomes1290) |
