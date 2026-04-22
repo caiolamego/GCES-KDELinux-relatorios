@@ -7,6 +7,7 @@ Nesta sprint inicial, o foco principal foi estabelecer a comunicação com a com
 #### Atividades Realizadas
 | Data | Atividade | Tipo | Status |
 |---|---|---|---|
+| 16/04/2026 | Abertura do repositório de documentação| Configuração | Concluído |
 | 17/04/2026 | Leitura do Código de Conduta e políticas da comunidade | Estudo | Concluído |
 | 17/04/2026 | Apresentação na comunidade (#new-contributors) no Matrix | Discussão | Concluído |
 | 17/04/2026 | Busca no repositório (GitLab CI/CD) para baixar a imagem do SO | Estudo | Concluído |
