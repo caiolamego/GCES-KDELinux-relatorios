@@ -26,3 +26,5 @@ O projeto escolhido para contribuição foi o ecossistema KDE, focando especific
 | João Pedro | 222006258 | [@JoaoPedrooSS](https://github.com/JoaoPedrooSS) |
 | João Capozzi | 232027476 | [@jonas3688](https://github.com/jonas3688) |
 | Diego Carlito Rodrigues de Souza | 221007690 | [@DiegoCarlito](https://github.com/DiegoCarlito) |
+| Felipe Amorim de Araújo | 221022275 | [@lipeaaraujo](https://github.com/lipeaaraujo) |
+| Membro 6 | 123456789 | [@membro4](https://github.com/membro4) |
