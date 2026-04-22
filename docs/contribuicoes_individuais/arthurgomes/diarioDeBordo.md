@@ -8,9 +8,6 @@
 
 Nesta sprint, o foco principal foi preparar o ambiente para rodar o **KDE Linux** em uma máquina virtual no Windows.
 
-Durante o processo, enfrentei dificuldades relacionadas à configuração do ambiente, especialmente na conversão do arquivo `.raw` para um formato compatível com o VirtualBox e na inicialização da máquina virtual.
-
-Apesar dos erros de boot enfrentados, consegui avançar significativamente na compreensão do processo de virtualização e na configuração de ambientes Linux experimentais.
 
 ---
 
@@ -20,7 +17,7 @@ Apesar dos erros de boot enfrentados, consegui avançar significativamente na co
 | 21/04 | Download da imagem `.raw` do KDE Linux | Setup | https://kde.org/linux/docs/install-vm/ | Concluído |
 | 21/04 | Conversão da imagem `.raw` para `.vmdk` com VBoxManage | Código | - | Concluído |
 | 21/04 | Criação da máquina virtual no VirtualBox | Setup | - | Concluído |
-| 21/04 | Configuração de EFI, disco e tentativa de boot | Setup | - | Concluído |
+| 21/04 | Configuração de EFI | Setup | - | Concluído |
 
 
 ---
