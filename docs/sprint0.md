@@ -18,6 +18,7 @@
 | João Capozzi | Configuração nativa de ambiente local no Linux (Manjaro) usando QEMU via `virt-manager`, configuração de firmware UEFI e boot direto via arquivo `.raw`. |
 | João Pedro | Configuração de ambiente local no Windows utilizando VirtualBox, incluindo a conversão de formato de disco (`.raw` para `.vmdk`) via `VBoxManage` e ativação de EFI para o boot. |
 | Victório Lázaro | Setup avançado de VM isolada (Ubuntu) com Virtual Machine Manager e VirtioFS para compartilhar o repositório local e buildar a imagem sem quebrar dependências do host (BTRFS). Pedido de atribuição em issue `Newcomer`. |
+| Diego Carlito | Setup de build local via Virt-Manager. Resolução de gargalos de espaço e BTRFS do Docker para gerar e validar a imagem customizada do sistema. |
 
 ## 3. Maiores Avanços
 * **Configuração de Ambiente Multiplataforma:** Toda a equipe obteve sucesso em subir o KDE Linux localmente de forma isolada, superando a barreira de virtualização do OS em diferentes ecossistemas: Windows via VirtualBox, Manjaro via QEMU e Ubuntu via Virtual Machine Manager.
