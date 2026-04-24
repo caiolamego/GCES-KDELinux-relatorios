@@ -24,3 +24,5 @@ O projeto escolhido para contribuição foi o ecossistema KDE, focando especific
 | Caio Magalhães Lamego | 222031045 | [@caiolamego](https://github.com/caiolamego) |
 | Victório Lázaro | 211031860 | [@Victor-oss](https://github.com/Victor-oss) |
 | Arthur Gomes Oliveira | 232013917 | [@arthurgomes1290](https://github.com/arthurgomes1290) |
+| Felipe Amorim de Araújo | 221022275 | [@lipeaaraujo](https://github.com/lipeaaraujo) |
+| Diego Carlito Rodrigues de Souza | 221007690 | [@DiegoCarlito](https://github.com/DiegoCarlito) |
