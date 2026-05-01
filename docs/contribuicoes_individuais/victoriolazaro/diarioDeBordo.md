@@ -81,15 +81,17 @@ Depois disso, só segui o passo-a-passo fornecido pelo próprio SO para criar a 
 
 ![Tela de boas-vindas do KDE](./assets/welcome_screen_kde.png)
 
-Para buildar as imagens do meu repositório fork do KDE-Linux disponibilizei meu repositório para a VM. Para isso, usei o VirtioFS. Primeiro, desliguei a máquina. Fui em Details e habilitei a opção "Enable shared memory"
+Para buildar as imagens do meu repositório fork do KDE-Linux eu clonei o repositório na VM. 
+
+Para compartilhar arquivos entre a VM e meu host, uso o VirtioFS. Primeiro, desligue a máquina. Vá em Details e habilitei a opção "Enable shared memory"
 
 ![Habilitar memória compartilhada](./assets/enable_shared_memory.png)
 
-Em seguida, fui em Add Hardware e selecionei um Filesystem. Escolhi o caminho do fork no host. Para a pasta de destino, eu selecionei a pasta shared na VM.
+Em seguida, vá em Add Hardware e selecione um Filesystem.
 
 ![Criar Filesystem compartilhado](./assets/filesystem.png)
 
-No terminal da pasta compartilhada na VM, eu só dei os comandos abaixo para montar o repositório compartilhado
+No terminal da pasta compartilhada na VM, é só dar os comandos abaixo para montar o repositório compartilhado
 
 ```
 sudo mkdir -p /mnt/shared
@@ -116,8 +118,40 @@ Tendo feito esse arquivo e personalizado, eu adicionei ao /etc/docker/daemon.jso
 }
 ```
 
-Em seguida, eu rodei “systemctl restart docker.socket docker.service” para atualizar o docker e “./build_docker.sh” na raiz da pasta compartilhada para buildar a imagem.
+Em seguida, eu rodei “systemctl restart docker.socket docker.service” para atualizar o docker e “./build_docker.sh” na raiz do repositório do meu fork que está dentro da VM para buildar a imagem.
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Resolver issue que pedi para a comunidade do KDE-Linux
+* [x] Resolver issue que pedi para a comunidade do KDE-Linux
+
+## Sprint 1 - 20/04/2026 - 04/05/2026
+
+### Resumo da Sprint
+
+Nesta sprint fiquei focado em contribuir para o projeto e submeti meu primeiro Merge Request para o KDE Linux. A issue que fiz é a [164](https://invent.kde.org/kde-linux/kde-linux/-/work_items/164#note_1470816) 
+
+| Data  | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| ----- | --------- | --------------------------------- | --------------- | ------ |
+| 30/04 | Primeiro MR para o KDE Linux | Código |  [Link](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/501) | Concluído |
+| 30/04 | Avisei para a comunidade sobre minha contribuição | Comentário |  [Link](https://invent.kde.org/kde-linux/kde-linux/-/work_items/164#note_1484829) | Concluído |
+
+### Maiores Avanços
+
+* Consegui fazer uma issue com a tag Newcomer
+* Consegui não só buildar a imagem mas alterar o código e ver minhas alterações funcionando
+* Testei a imagem que gerei com minhas alterações em outra VM
+
+### Maiores Dificuldades
+
+* Para buildar a imagem do KDE-Linux precisa de uma rede de internet boa
+* Mesmo com uma boa internet, processo de build é lento, tenho que esperar meia hora para completar o build e verificar se minhas alterações funcionaram
+
+
+### Aprendizados
+
+* Compreendi mais sobre como o build funciona
+* Aprendi mais sobre o código do repositório
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Procurar nova issue NewComer para contribuir
