@@ -1,6 +1,6 @@
 ### Diário de Bordo – Caio Lamego
 
-#### Sprint 1 - 20/04/2026 - 04/05/2026
+#### Sprint 0
 ##### Resumo da Sprint
 Nesta sprint inicial, o foco principal foi estabelecer a comunicação com a comunidade KDE, compreender as políticas do projeto e superar a complexidade de configurar o ambiente local. Diferente de softwares tradicionais, o projeto escolhido (KDE Linux) é um sistema operacional imutável em desenvolvimento ativo ("cutting-edge immutable OS"). O esforço técnico principal concentrou-se na criação de uma Máquina Virtual no Linux hospedeiro e no mapeamento de melhorias (Issues) para as próximas etapas.
 
@@ -52,7 +52,7 @@ Diferente de repositórios comerciais no GitHub, o ecossistema do KDE possui uma
 * [x] Abrir o primeiro Pull Request / Merge Request.
 
 
-#### Sprint 1 - 20/04/2026 - 04/05/2026
+#### Sprint 1 - 27/04/2026 - 04/05/2026
 
 ##### Resumo da Sprint
 Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o repositório do projeto. No entanto, me deparei com um cenário de altíssima concorrência: as poucas issues ativas com a tag `Newcomer` já haviam sido escolhidas por outros membros da comunidade ou por colegas da nossa equipe (como a Issue #164, a #319, a #219 e a #531). Para não travar meu desenvolvimento, adotei uma postura proativa de Engenharia de Software: realizei uma auditoria cruzada entre a documentação oficial da Wiki e o `README.md` principal do repositório. **Criei uma nova Issue apontando um gargalo real de onboarding** e assumi a responsabilidade de resolvê-la através de um *Merge Request*, garantindo antes a comunicação prévia exigida pelas políticas da comunidade.
