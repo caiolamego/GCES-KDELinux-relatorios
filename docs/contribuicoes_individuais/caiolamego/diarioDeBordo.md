@@ -66,8 +66,11 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 
 ##### Maiores Avanços
 * **Etiqueta Open Source e Comunicação:** Antes de simplesmente abrir a Issue, apliquei os princípios de "Be collaborative" e "Be pragmatic" do Código de Conduta do KDE. Fui até o canal oficial no Matrix e avisei os mantenedores previamente sobre a minha intenção de alterar o `README.md`, respeitando o aviso do repositório que pede aos usuários para consultarem a comunidade antes de reportarem *issues*.
+![aviso no Matrix](./assets/sprint1-matrix.png)
 * **Senso Crítico e Auditoria (A identificação do gargalo):** Ao realizar uma revisão minuciosa na Wiki oficial do KDE, notei que a justificativa perfeita para criar minha própria Issue residia em um erro de fluxo do usuário: *O grande gargalo que afeta os novatos (e que afetou nossos colegas na Sprint 0) é que quando um desenvolvedor entra no repositório de código do KDE Linux, a primeira coisa que ele vê é o arquivo `README.md`. Atualmente, ele não possui nenhum alerta sobre o UEFI e não guia o desenvolvedor de forma clara para ler a página da Wiki. O desenvolvedor acaba tentando montar a Máquina Virtual de forma intuitiva, usa o BIOS antigo por padrão, e o sistema quebra.*
+![Issue Sprint1](./assets/issue-sp1.png)
 * **Primeira Contribuição:** Criei valor real para a comunidade solucionando essa falha apontada acima. Inseri a seção `Test it in a Virtual Machine` no `README.md` alertando sobre o UEFI e submeti meu primeiro *Merge Request* oficial com sucesso.
+![MR Sprint1](./assets/mr-sp1.png)
 
 ##### Maiores Dificuldades
 * **Concorrência Agressiva por Issues:** A maior dificuldade da sprint foi a escassez de tarefas, por serem poucas de newcomers e por estarem sendo disputadas por diversos membros da comunidade. A maioria das Issues mais acessíveis já estavam atribuídas, o que me forçou a criar minha própria Issue para não ficar parado.
