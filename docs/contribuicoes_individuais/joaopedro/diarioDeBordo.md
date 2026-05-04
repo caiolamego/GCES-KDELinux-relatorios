@@ -112,3 +112,60 @@ Configurações → Sistema → Placa-mãe → Enable EFI
 ## Plano Pessoal para a Próxima Sprint
 
 - [ ] Encontrar issue para contribuir no projeto  
+
+## Sprint 1 - 20/04/2026 - 04/05/2026
+
+---
+
+## Resumo da Sprint
+
+Neste sprint, meu foco foi entender o projeto KDE Linux e conseguir iniciar minha primeira contribuição. No início, tive dificuldade em encontrar uma issue adequada para iniciantes, especialmente com a tag *Newcomer*. Após explorar o repositório e analisar diferentes tarefas disponíveis, consegui identificar uma issue compatível com meu nível.
+
+Após encontrar a issue, entrei em contato com a comunidade do projeto solicitando autorização para trabalhar nela como parte de uma atividade acadêmica.
+
+---
+
+## Atividades
+
+| Data  | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| ----- | --------- | --------------------------------- | --------------- | ------ |
+| 20/04 | Busca por issues com a tag Newcomer | Outro | - | Concluído |
+| 22/04 | Análise de issues disponíveis no repositório | Outro | - | Concluído |
+| 30/04 | Identificação de uma issue compatível | Outro | - | Concluído |
+| 04/05 | Envio de mensagem solicitando contribuição na issue | Discussão | - | Concluído |
+
+---
+
+## Maiores Avanços
+
+- Consegui encontrar uma issue adequada para iniciantes no projeto KDE Linux  
+- Realizei o primeiro contato com a comunidade solicitando participação  
+- Entendi melhor o funcionamento do fluxo de contribuição em projetos open source  
+
+---
+
+## Maiores Dificuldades
+
+- Dificuldade em encontrar issues com a tag *Newcomer*  
+- Necessidade de entender o contexto técnico das issues antes de escolher uma  
+- Insegurança inicial sobre como abordar a comunidade do projeto  
+
+---
+
+## Aprendizados
+
+- Aprendi a importância de analisar bem uma issue antes de escolher trabalhar nela  
+- Entendi como funciona o primeiro contato com mantenedores em projetos open source  
+- Percebi que a comunicação clara e educada é essencial ao contribuir com projetos reais  
+
+---
+
+## Mensagem enviada à comunidade
+
+![Issue](./assets/img_issue.png)
+---
+
+## Plano Pessoal para a Próxima Sprint
+
+- [ ] Aguardar retorno da comunidade sobre a issue  
+- [ ] Iniciar a contribuição no projeto
