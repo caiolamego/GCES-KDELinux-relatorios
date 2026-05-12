@@ -16,14 +16,13 @@ Nesta sprint inicial, o foco foi estruturar um ambiente de desenvolvimento robus
 
 | Data  | Atividade                                                                 | Tipo (Código/Doc/Discussão/Outro) | Link/Referência                                                                         | Status    |
 | ----- | ------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------- | --------- |
-| 14/04 | Leitura dos guias de envolvimento e contribuição na comunidade KDE        | Estudo                            | [Link](https://community.kde.org/Get_Involved)                                          | Concluído |
-| 15/04 | Instalação do KDE Linux via VM (Virt-Manager)                             | Estudo                            | [Link](https://kde.org/linux/docs/install-vm/), [Captura de tela](./assets/kde_linux_vm_running.png) | Concluído |
-| 16/04 | Avaliação da primeira Issue para trabalhar (Filtro *Newcomer*)            | Estudo                            | [Link](https://invent.kde.org/kde-linux/kde-linux/-/work_items?label_name[]=Newcomer)   | Concluído |
-| 18/04 | Criação do fork                                                           | Código                            | [Link](https://invent.kde.org/diegocarlito/kde-linux)                                   | Concluído |
-| 19/04 | Instalação e configuração da VM de Build (Virt-Manager, UEFI, 4GB RAM)    | Infra                             | -                                                                                       | Concluído |
-| 20/04 | Configuração de sistema de arquivos compartilhado (VirtioFS) entre Host e VM| Infra                           | -                                                                                       | Concluído |
-| 21/04 | Ajuste do Docker (BTRFS), expansão de disco e compilação da imagem        | Código                            | [Captura de tela](./assets/build_message.png)                                           | Concluído |
-| 21/04 | Criação do relatório de contribuição individual                           | Doc                               | -                                                                                       | Concluído |
+| 14/04 | Leitura dos guias de envolvimento e contribuição na comunidade KDE        | Estudo                            | [Get Involved](https://community.kde.org/Get_Involved)                                          | Concluído |
+| 15/04 | Instalação do KDE Linux via VM (Virt-Manager)                             | Estudo                            | [Guia para instalar o KDE Linux em uma VM](https://kde.org/linux/docs/install-vm/), [KDE Linux rodando na VM](./assets/kde_linux_vm_running.png) | Concluído |
+| 16/04 | Avaliação da primeira Issue para trabalhar (Filtro *Newcomer*)            | Estudo                            | [Issues para novos contribuidores](https://invent.kde.org/kde-linux/kde-linux/-/work_items?label_name[]=Newcomer)   | Concluído |
+| 18/04 | Criação do fork                                                           | Código                            | [Fork do KDE Linux](https://invent.kde.org/diegocarlito/kde-linux)                      | Concluído |
+| 19/04 | Instalação e configuração da VM de Build (Virt-Manager, UEFI, 4GB RAM)    | Infra                             | [Guia de instalação pelo Virt-Manager](https://kde.org/linux/docs/install-vm/#virtual-machine-manager-virt-manager) | Concluído |
+| 20/04 | Configuração de sistema de arquivos compartilhado (VirtioFS) entre Host e VM | Infra                          | [Arch Wiki - Libvirt: virtiofs](https://wiki.archlinux.org/title/Libvirt#virtiofs), [Doc oficial libvirt - virtiofs](https://libvirt.org/kbase/virtiofs.html) | Concluído |
+| 21/04 | Ajuste do Docker (BTRFS), expansão de disco e compilação da imagem        | Código                            | [Guia para ajuste do build](https://kde.org/linux/docs/kde-linux-dev/), [Sucesso do build da imagem do KDE Linux](./assets/build_message.png) | Concluído |
 
 ### Maiores Avanços
 
