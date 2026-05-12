@@ -148,3 +148,43 @@ Por fim, rodei a imagem buildada na máquina virtual utilizando o VirtualBox, e 
 
 ---
 
+## Sprint 1 – 23/04 - 08/05
+
+### Resumo da Sprint
+
+Nesse Sprint, meu foco foi conseguir identificar uma issue adequada para iniciantes no repositório do KDE Linux e realizar minha primeira contribuição com código. Consegui encontrar uma issue com a tag `Newcomer` relacionada à implementação de um recurso de pré-visualização de arquivos STL, e entrei em contato com a comunidade do projeto para solicitar autorização para trabalhar nela como parte de uma atividade acadêmica.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
+| ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
+| 01/05 | Procura por issues com a tag `Newcomer` no repositório | Estudo | [Issues](https://invent.kde.org/kde-linux/kde-linux/-/work_items?sort=created_date&state=opened&label_name%5B%5D=Newcomer&first_page_size=20) | Concluído |
+| 01/05 | Escolha da issue [Pre-install an STL thumbnailer](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219) para contribuir | Estudo | [Issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219) | Concluído |
+| 02/05 | Envio de comentário na issue escolhida para solicitar autorização para contribuir | Discussão | [Comentário na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1485879) | Concluído |
+| 03/05 | Resposta dos mantenedores autorizando a contribuição e dando mais instruções | Discussão | [Resposta na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1485997) | Concluído |
+| 05/05 | Estudo sobre o formato STL, STL thumbnailers disponíveis e o gerenciador de pacotes Flatpak | Estudo | [Formato STL](https://en.wikipedia.org/wiki/STL_(file_format)), [stl-thumb](https://github.com/unlimitedbacon/stl-thumb), [Papa’s Best STL Thumbnails](https://papas-best.com/stlthumbnails_en), [Marlin 3D Printer Tool](https://marlin3dprintertool.se/stl-thumbnail/) | Concluído |
+| 06/06 | Estudo sobre empacotamento de aplicativos utilizando o Flatpak | Estudo | [Flatpak](https://docs.flatpak.org/en/latest/first-build.html) | Concluído |
+
+### Maiores Avanços
+
+* **Identificação de uma issue adequada para iniciantes**: Consegui encontrar uma issue com a tag `Newcomer` relacionada à implementação de um recurso de pré-visualização de arquivos STL, o que me permitiu escolher uma tarefa adequada para começar a contribuir com código no projeto.
+* **Contato com a comunidade para solicitar autorização para contribuir**: Entrei em contato com os mantenedores do projeto através da issue para solicitar autorização para trabalhar na issue escolhida como parte de uma atividade acadêmica, e recebi uma resposta positiva autorizando minha contribuição e dando mais instruções sobre como proceder.
+* **Estudo sobre o formato STL, STL thumbnailers disponíveis e o gerenciador de pacotes Flatpak**: Realizei um estudo aprofundado sobre o formato de arquivos STL, os thumbnailers de arquivos STL disponíveis e o gerenciador de pacotes Flatpak, o que me permitiu entender melhor o contexto técnico da issue escolhida e me preparar para realizar a contribuição de forma mais eficiente.
+
+### Maiores Dificuldades
+
+* **Poucas issues abertas para novos contribuidores**: Notei que existem poucas issues abertas com a tag `Newcomer`, o que dificultou a identificação de tarefas mais simples para que eu pudesse começar a contribuir.
+* **Entender o contexto técnico da issue escolhida**: A issue escolhida envolve conceitos técnicos relacionados ao formato de arquivos STL, thumbnailers e empacotamento de aplicativos com Flatpak, o que exigiu um estudo aprofundado para entender o contexto e os requisitos técnicos necessários para realizar a contribuição de forma eficiente.
+
+### Aprendizados
+
+* **Identificar uma issue adequada para iniciantes**: Aprendi a importância de analisar bem as issues disponíveis no repositório para identificar aquelas que são adequadas para iniciantes, levando em consideração o nível de complexidade, os requisitos técnicos e o contexto da tarefa.
+* **Contato com a comunidade para solicitar autorização para contribuir**: Entendi como funciona o processo de contato com os mantenedores de um projeto de software livre para solicitar autorização para contribuir, e a importância de ser claro e educado na comunicação para estabelecer uma boa relação com a comunidade do projeto.
+* **Estudo sobre o formato STL, STL thumbnailers disponíveis e o gerenciador de pacotes Flatpak**: Aprendi sobre o formato de arquivos STL, os thumbnailers de arquivos STL disponíveis e o gerenciador de pacotes Flatpak, o que me permitiu entender melhor o contexto técnico da issue escolhida e me preparar para realizar a contribuição de forma mais eficiente.
+* **Importância de entender o contexto técnico de uma issue antes de começar a contribuir**: Percebi que é fundamental entender o contexto técnico de uma issue antes de começar a trabalhar nela, para garantir que a contribuição seja feita de forma eficiente e atenda aos requisitos técnicos necessários.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Fazer o empacotamento do thumbnailer de arquivos STL utilizando o Flatpak, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
+* [ ] Abrir o pull request e começar a implementar as alterações necessárias na codebase do KDE Linux para integrar o thumbnailer de arquivos STL.
+* [ ] Interagir com os mantenedores e outros membros da comunidade para tirar dúvidas, receber feedback e ajustar a contribuição conforme necessário para garantir que ela seja aceita e integrada ao projeto.
