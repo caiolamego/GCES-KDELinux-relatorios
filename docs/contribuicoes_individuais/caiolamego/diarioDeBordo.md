@@ -55,7 +55,7 @@ Diferente de repositórios comerciais no GitHub, o ecossistema do KDE possui uma
 #### Sprint 1 - 27/04/2026 - 04/05/2026
 
 ##### Resumo da Sprint
-Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o repositório do projeto. No entanto, me deparei com um cenário de altíssima concorrência: as poucas issues ativas com a tag `Newcomer` já haviam sido escolhidas por outros membros da comunidade ou por colegas da nossa equipe (como a Issue #164, a #319, a #219 e a #531). Para não travar meu desenvolvimento, adotei uma postura proativa de Engenharia de Software: realizei uma auditoria cruzada entre a documentação oficial da Wiki e o `README.md` principal do repositório. **Criei uma nova Issue apontando um gargalo real de onboarding** e assumi a responsabilidade de resolvê-la através de um *Merge Request*, garantindo antes a comunicação prévia exigida pelas políticas da comunidade.
+Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o repositório do projeto. No entanto, houve altíssima concorrência: as poucas issues ativas com a tag `Newcomer` já tinham sido escolhidas por outros membros da comunidade ou por colegas da nossa equipe (como a Issue #164, a #319, a #219 e a #531). Para não travar meu desenvolvimento, comparei a documentação oficial da Wiki e o `README.md` principal do repositório. Criei uma nova Issue apontando uma falta de informação sobre o onboarding e resolvi através de um *Merge Request*, respeitando as políticas da comunidade.
 
 | Data | Atividade | Tipo (Código/Doc/Discussão) | Status |
 |---|---|---|---|
@@ -63,26 +63,27 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 | 03/05/2026 | Criação de nova Issue no Invent sobre onboarding de VMs | Doc/Gestão | Concluído |
 | 03/05/2026 | Inserção da seção "Test it in a Virtual Machine" no `README.md` | Código/Doc | Concluído |
 | 03/05/2026 | Abertura do meu Primeiro Merge Request (MR) | Código | Concluído |
-| 04/05/2026 | MR aceito e mesclado pelos mantenedores do KDE | Código | Concluído |
+| 04/05/2026 | MR aceito e merge concluído | Código | Concluído |
 
 ##### Maiores Avanços
 * **Etiqueta Open Source e Comunicação:** Antes de simplesmente abrir a Issue, apliquei os princípios de "Be collaborative" e "Be pragmatic" do Código de Conduta do KDE. Fui até o canal oficial no Matrix e avisei os mantenedores previamente sobre a minha intenção de alterar o `README.md`, respeitando o aviso do repositório que pede aos usuários para consultarem a comunidade antes de reportarem *issues*.
 ![aviso no Matrix](./assets/sprint1-matrix.png)
-* **Senso Crítico e Auditoria (A identificação do gargalo):** Ao realizar uma revisão minuciosa na Wiki oficial do KDE, notei que a justificativa perfeita para criar minha própria Issue residia em um erro de fluxo do usuário: *O grande gargalo que afeta os novatos (e que afetou nossos colegas na Sprint 0) é que quando um desenvolvedor entra no repositório de código do KDE Linux, a primeira coisa que ele vê é o arquivo `README.md`. Atualmente, ele não possui nenhum alerta sobre o UEFI e não guia o desenvolvedor de forma clara para ler a página da Wiki. O desenvolvedor acaba tentando montar a Máquina Virtual de forma intuitiva, usa o BIOS antigo por padrão, e o sistema quebra.*
+* **Senso Crítico e Auditoria (A identificação do gargalo):** Ao realizar uma revisão na Wiki oficial do KDE, notei que pudesse ser necessária uma Issue: *Quando um desenvolvedor entra no repositório de código do KDE Linux, a primeira coisa que ele vê é o arquivo `README.md`. Atualmente, ele não possui nenhum alerta sobre o UEFI e não guia o desenvolvedor de forma clara para ler a página da Wiki. O desenvolvedor acaba tentando montar a Máquina Virtual de forma intuitiva, usa o BIOS antigo por padrão, e o sistema quebra.*
 ![Issue Sprint1](./assets/issue-sp1.png)
-* **Primeira Contribuição:** Criei valor real para a comunidade solucionando essa falha apontada acima. Inseri a seção `Test it in a Virtual Machine` no `README.md` alertando sobre o UEFI e submeti meu primeiro *Merge Request* oficial com sucesso.
+* **Primeira Contribuição:** Contribuição para a comunidade solucionando essa falha apontada acima. Inseri a seção `Test it in a Virtual Machine` no `README.md` alertando sobre o UEFI e submeti meu primeiro *Merge Request*.
 ![MR Sprint1](./assets/mr-sp1.png)
-* **MR Aprovado:** O Merge Request foi aprovado e mesclado pelos mantenedores do KDE, o que representa a minha primeira contribuição oficial para um projeto Open Source de grande porte.
-![MR Sprint1 Aprovado](./assets/merge.png)
+
+* **MR aprovado:** O Merge Request foi aprovado pelos mantenedores do KDE e integrado ao código principal, dessa forma atualizando a documentação do projeto.
+![MR Sprint1](./assets/merge.png)
 
 ##### Maiores Dificuldades
-* **Concorrência Agressiva por Issues:** A maior dificuldade da sprint foi a escassez de tarefas, por serem poucas de newcomers e por estarem sendo disputadas por diversos membros da comunidade. A maioria das Issues mais acessíveis já estavam atribuídas, o que me forçou a criar minha própria Issue para não ficar parado.
+* **Concorrência Agressiva por Issues:** A maior dificuldade da sprint foi a alta de tarefas, por serem poucas de newcomers e por estarem sendo disputadas por diversos membros da comunidade. A maioria das Issues mais acessíveis já estavam atribuídas, o que me forçou a criar minha própria Issue.
 
 ##### Aprendizados
 * **A Importância da Transparência:** Aprendi que, no Open Source, o processo de comunicação (avisar no Matrix, justificar a Issue) é tão importante quanto o código em si. Respeitar as regras de governança do repositório abre portas mais facilmente.
-* **A Importância da Porta de Entrada (README):** Compreendi que ter uma boa documentação na Wiki não basta se o arquivo raiz do repositório não conduzir ativamente os novos contribuidores até ela e não fizer alertas de infraestrutura para os ambientes locais de *build* e teste.
+* **A Importância do README:** Compreendi que ter uma boa documentação na Wiki não basta se o arquivo raiz do repositório não conduzir ativamente os novos contribuidores até ela e não fizer alertas de infraestrutura para os ambientes locais de *build* e teste.
 
 ##### Plano Pessoal para a Próxima Sprint
-* [ ] Acompanhar a revisão (*Code Review*) do meu Merge Request pelos mantenedores do KDE.
-* [ ] Fazer os ajustes (*commits* adicionais) caso os mantenedores solicitem alterações.
+* [x] Acompanhar a revisão (*Code Review*) do meu Merge Request pelos mantenedores do KDE.
+* [ ] Começar a contribuir em novas Issues, além de Newcomer, para ganhar mais experiência com o código.
 * [ ] Estudar o *codebase* com maior antecedência para a Sprint 2, buscando atuar ativamente em *issues* de código.
