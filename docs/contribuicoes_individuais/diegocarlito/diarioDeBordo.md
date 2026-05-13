@@ -1,6 +1,7 @@
 # Diário de Bordo – Diego Carlito Rodrigues de Souza
 
 **Disciplina:** Gerência de Configuração e Evolução de Software
+**Equipe**: KDE Linux
 **Comunidade/Projeto de Software Livre:** KDE Linux
 
 ---
@@ -15,14 +16,13 @@ Nesta sprint inicial, o foco foi estruturar um ambiente de desenvolvimento robus
 
 | Data  | Atividade                                                                 | Tipo (Código/Doc/Discussão/Outro) | Link/Referência                                                                         | Status    |
 | ----- | ------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------- | --------- |
-| 14/04 | Leitura dos guias de envolvimento e contribuição na comunidade KDE        | Estudo                            | [Link](https://community.kde.org/Get_Involved)                                          | Concluído |
-| 15/04 | Instalação do KDE Linux via VM (Virt-Manager)                             | Estudo                            | [Link](https://kde.org/linux/docs/install-vm/), [Captura de tela](./assets/kde_linux_vm_running.png) | Concluído |
-| 16/04 | Avaliação da primeira Issue para trabalhar (Filtro *Newcomer*)            | Estudo                            | [Link](https://invent.kde.org/kde-linux/kde-linux/-/work_items?label_name[]=Newcomer)   | Concluído |
-| 18/04 | Criação do fork                                                           | Código                            | [Link](https://invent.kde.org/diegocarlito/kde-linux)                                   | Concluído |
-| 19/04 | Instalação e configuração da VM de Build (Virt-Manager, UEFI, 4GB RAM)    | Infra                             | -                                                                                       | Concluído |
-| 20/04 | Configuração de sistema de arquivos compartilhado (VirtioFS) entre Host e VM| Infra                           | -                                                                                       | Concluído |
-| 21/04 | Ajuste do Docker (BTRFS), expansão de disco e compilação da imagem        | Código                            | [Captura de tela](./assets/build_message.png)                                           | Concluído |
-| 21/04 | Criação do relatório de contribuição individual                           | Doc                               | -                                                                                       | Concluído |
+| 14/04 | Leitura dos guias de envolvimento e contribuição na comunidade KDE        | Estudo                            | [Get Involved](https://community.kde.org/Get_Involved)                                          | Concluído |
+| 15/04 | Instalação do KDE Linux via VM (Virt-Manager)                             | Estudo                            | [Guia para instalar o KDE Linux em uma VM](https://kde.org/linux/docs/install-vm/), [KDE Linux rodando na VM](./assets/kde_linux_vm_running.png) | Concluído |
+| 16/04 | Avaliação da primeira Issue para trabalhar (Filtro *Newcomer*)            | Estudo                            | [Issues para novos contribuidores](https://invent.kde.org/kde-linux/kde-linux/-/work_items?label_name[]=Newcomer)   | Concluído |
+| 18/04 | Criação do fork                                                           | Código                            | [Fork do KDE Linux](https://invent.kde.org/diegocarlito/kde-linux)                      | Concluído |
+| 19/04 | Instalação e configuração da VM de Build (Virt-Manager, UEFI, 4GB RAM)    | Infra                             | [Guia de instalação pelo Virt-Manager](https://kde.org/linux/docs/install-vm/#virtual-machine-manager-virt-manager) | Concluído |
+| 20/04 | Configuração de sistema de arquivos compartilhado (VirtioFS) entre Host e VM | Infra                          | [Arch Wiki - Libvirt: virtiofs](https://wiki.archlinux.org/title/Libvirt#virtiofs), [Doc oficial libvirt - virtiofs](https://libvirt.org/kbase/virtiofs.html) | Concluído |
+| 21/04 | Ajuste do Docker (BTRFS), expansão de disco e compilação da imagem        | Código                            | [Guia para ajuste do build](https://kde.org/linux/docs/kde-linux-dev/), [Sucesso do build da imagem do KDE Linux](./assets/build_message.png) | Concluído |
 
 ### Maiores Avanços
 
@@ -44,5 +44,42 @@ Nesta sprint inicial, o foco foi estruturar um ambiente de desenvolvimento robus
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Solicitar o *assign* em uma das *issues* de nível *Newcomer* mapeadas.
-* [ ] Submeter o primeiro Merge Request (MR) seguindo os padrões de contribuição da comunidade.
+* [x] Solicitar o *assign* em uma das *issues* de nível *Newcomer* mapeadas.
+* [x] Submeter o primeiro Merge Request (MR) seguindo os padrões de contribuição da comunidade.
+
+---
+
+## Sprint 1 – 22/04/2026 – 11/05/2026
+
+### Resumo da Sprint
+
+O foco desta sprint foi a contribuição direta para o projeto **KDE Linux Website**, visando sanar a falta de documentação sobre builds customizados. O trabalho compreendeu desde a negociação da *issue* com os mantenedores até a submissão formal do Merge Request. Implementei melhorias no guia de desenvolvimento, detalhando a injeção de pacotes via `mkosi` e o teste rápido de imagens `.raw` no Virt-Manager.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                                                 | Tipo (Código/Doc/Discussão/Outro) | Link/Referência                                                                         | Status    |
+| ----- | ------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------- | --------- |
+| 03/05 | Escolha da Issue e solicitação de *assign*                                | Discussão                         | [Issue #531](https://invent.kde.org/kde-linux/kde-linux/-/work_items/531), [Solicitação de *assign*](https://invent.kde.org/kde-linux/kde-linux/-/work_items/531#note_1486369) | Concluído |
+| 10/05 | Criação do Fork do KDE Linux Website                                      | Código                            | [Fork do KDE Linux Website](https://invent.kde.org/diegocarlito/linux-kde-org)          | Concluído |
+| 10/05 | Elaboração da documentação                                                | Doc                               | [Arquivo modificado](https://invent.kde.org/diegocarlito/linux-kde-org/-/blob/docs/issue-531-mkosi-vm/content/docs/kde-linux-dev.md?ref_type=heads), [Commit](https://invent.kde.org/diegocarlito/linux-kde-org/-/commit/2689a11432752281199e564c47317b8809a274a2) | Concluído |
+| 10/05 | Abertura do Merge Request (MR)                                            | Código                            | [MR](https://invent.kde.org/websites/linux-kde-org/-/merge_requests/4)                  | Concluído |
+| 10/05 | Pedido de revisão do MR                                                   | Discussão                         | [Solicitação de revisão do MR](https://invent.kde.org/kde-linux/kde-linux/-/work_items/531#note_1492764) | Concluído |
+
+### Maiores Avanços
+
+* **Qualidade da Documentação:** Adição de um fluxo de trabalho otimizado para desenvolvedores, reduzindo o tempo de teste de imagens customizadas através do uso de discos existentes no Virt-Manager.
+* **Padronização Profissional:** Uso de Conventional Commits e assinatura de autoria em conformidade com as políticas de auditoria da comunidade KDE.
+
+### Maiores Dificuldades
+
+* **Sintaxe Markdown/Hugo:** Ajuste da formatação de blocos de código e links relativos para garantir que o motor do site (Hugo) renderizasse o guia corretamente conforme o padrão visual da documentação oficial.
+
+### Aprendizados
+
+* Entendimento do fluxo de trabalho *upstream/origin* em projetos de larga escala e a importância de manter a branch de contribuição isolada.
+* Comunicação técnica ao interagir diretamente com mantenedores de projetos de software livre.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
+* [ ] Iniciar o mapeamento de *issues* de código (C++/Bash) para a próxima etapa de contribuição.
