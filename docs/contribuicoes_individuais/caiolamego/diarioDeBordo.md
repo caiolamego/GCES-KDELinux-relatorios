@@ -63,6 +63,7 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 | 03/05/2026 | Criação de nova Issue no Invent sobre onboarding de VMs | Doc/Gestão | Concluído |
 | 03/05/2026 | Inserção da seção "Test it in a Virtual Machine" no `README.md` | Código/Doc | Concluído |
 | 03/05/2026 | Abertura do meu Primeiro Merge Request (MR) | Código | Concluído |
+| 04/05/2026 | MR aceito e merge concluído | Código | Concluído |
 
 ##### Maiores Avanços
 * **Etiqueta Open Source e Comunicação:** Antes de simplesmente abrir a Issue, apliquei os princípios de "Be collaborative" e "Be pragmatic" do Código de Conduta do KDE. Fui até o canal oficial no Matrix e avisei os mantenedores previamente sobre a minha intenção de alterar o `README.md`, respeitando o aviso do repositório que pede aos usuários para consultarem a comunidade antes de reportarem *issues*.
@@ -72,6 +73,9 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 * **Primeira Contribuição:** Criei valor real para a comunidade solucionando essa falha apontada acima. Inseri a seção `Test it in a Virtual Machine` no `README.md` alertando sobre o UEFI e submeti meu primeiro *Merge Request* oficial com sucesso.
 ![MR Sprint1](./assets/mr-sp1.png)
 
+* **MR aprovado:** O Merge Request foi aprovado pelos mantenedores do KDE e integrado ao código principal, dessa forma atualizando a documentação do projeto.
+![MR Sprint1](./assets/merge.png)
+
 ##### Maiores Dificuldades
 * **Concorrência Agressiva por Issues:** A maior dificuldade da sprint foi a escassez de tarefas, por serem poucas de newcomers e por estarem sendo disputadas por diversos membros da comunidade. A maioria das Issues mais acessíveis já estavam atribuídas, o que me forçou a criar minha própria Issue para não ficar parado.
 
@@ -80,6 +84,6 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 * **A Importância da Porta de Entrada (README):** Compreendi que ter uma boa documentação na Wiki não basta se o arquivo raiz do repositório não conduzir ativamente os novos contribuidores até ela e não fizer alertas de infraestrutura para os ambientes locais de *build* e teste.
 
 ##### Plano Pessoal para a Próxima Sprint
-* [ ] Acompanhar a revisão (*Code Review*) do meu Merge Request pelos mantenedores do KDE.
-* [ ] Fazer os ajustes (*commits* adicionais) caso os mantenedores solicitem alterações.
+* [x] Acompanhar a revisão (*Code Review*) do meu Merge Request pelos mantenedores do KDE.
+* [ ] Começar a contribuir em novas Issues, além de Newcomer, para ganhar mais experiência com o código.
 * [ ] Estudar o *codebase* com maior antecedência para a Sprint 2, buscando atuar ativamente em *issues* de código.
