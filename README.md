@@ -27,3 +27,4 @@ O projeto escolhido para contribuição foi o ecossistema KDE, focando especific
 | Felipe Amorim de Araújo | 221022275 | [@lipeaaraujo](https://github.com/lipeaaraujo) |
 | Diego Carlito Rodrigues de Souza | 221007690 | [@DiegoCarlito](https://github.com/DiegoCarlito) |
 | Renan Lacerda | 190048191 | [@LacerdaRenan](https://github.com/LacerdaRenan) |
+| João Pedro | 222006258 | [@LacerdaRenan](https://github.com/JoaoPedrooSS) |
