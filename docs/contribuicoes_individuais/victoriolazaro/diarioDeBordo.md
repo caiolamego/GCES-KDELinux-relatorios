@@ -154,4 +154,42 @@ Nesta sprint fiquei focado em contribuir para o projeto e submeti meu primeiro M
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Procurar nova issue NewComer para contribuir
+* [x] Procurar nova issue NewComer para contribuir
+
+## Sprint 2 - 04/05/2026 - 25/05/2026
+
+### Resumo da Sprint
+
+Nesta sprint, tive que pegar uma issue que não tinha a tag NewComer devido à falta de issues com essa tag. Eu mexi com uma issue bem diferente da última que eu peguei porque a issue da última sprint era relacionada com o processo de build, já a desse sprint envolve jobs CI, armazenamento de builds e limpeza de builds falhos.
+
+| Data  | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| ----- | --------- | --------------------------------- | --------------- | ------ |
+| 16/05 | Atribuição oficial e orientação na Issue #581 | Discussão | [Link](https://invent.kde.org/kde-linux/kde-linux/-/work_items/581#note_1497098) | Concluído |
+| 18/05 | Abertura do Merge Request com documentação em inglês | Doc / Código | [Link](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/528) | Concluído |
+| 30/04 | Avisei para a comunidade sobre minha contribuição | Comentário |  [Link](https://invent.kde.org/kde-linux/kde-linux/-/work_items/581#note_1498510) | Concluído |
+
+### Maiores Avanços
+
+* Consegui compreender como o sistema de CI integra múltiplos componentes (vacuum, uploader, token-redeemer, GPG) em um fluxo coeso. Percebi que cada ferramenta tem uma responsabilidade bem definida e se comunicam através de variáveis de ambiente e S3.
+
+* Consegui criar um job GitLab que lida corretamente com secrets (chaves GPG) através do mecanismo `secure_files`, garantindo que credenciais sensíveis nunca apareçam em logs ou histórico de git.
+
+### Maiores Dificuldades
+
+
+* Com muitas variáveis (`VACUUM_REMOVE_BUILD`, `VACUUM_REALLY_DELETE`, `GNUPGHOME`, `CI_*`), foi desafiador visualizar qual variável era lida em qual ponto. Passei tempo relendo o código do vacuum-v3 para garantir que a variável chegava corretamente.
+
+### Aprendizados
+
+* Ao invés de criptografar a chave GPG e comitá-la no repo (péssima prática), ou exigir SSH manual (tedioso), GitLab carrega secrets encriptados via `curl | bash`.
+
+* Ao permitir que `toForceDelete` sobrescreva `toProtect`, qualquer build golden (mesmo que importante) pode ser acidentalmente removido se a variável for mal-definida. A validação no CI job (`if [ -z "$VACUUM_REMOVE_BUILD" ]`) é essencial — é a defesa da "linha de frente". Aprendi que muros de validação em múltiplos pontos são saudáveis.
+
+* O vacuum imprime `"Will force-delete bad build: 20260601"` e `"Deleting 20260601"`, esses logs aparecem no output do job GitLab e ficam no histórico. Excelente para auditoria.
+
+* `buildDeletionSlice` agora tem 3 parâmetros ao invés de 2. Ao adicionar o novo, passei `nil` para `toForceDelete` em ambos os call-sites existentes, garantindo que o comportamento "sem VACUUM_REMOVE_BUILD" é idêntico ao de antes. Essa foi a lição mais prática sobre manutenção de código legado.
+
+### Plano Pessoal para a Próxima Sprint
+- [ ] Acompanhar o processo de *Code Review* e homologação efetuado pelos mantenedores;
+- [ ] Aplicar eventuais refatorações ou revisões de código sugeridas pela comunidade do KDE;
+- [ ] Buscar nova issue.
