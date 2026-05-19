@@ -169,3 +169,80 @@ Após encontrar a issue, entrei em contato com a comunidade do projeto solicitan
 
 - [ ] Aguardar retorno da comunidade sobre a issue  
 - [ ] Iniciar a contribuição no projeto
+
+
+# Sprint 2 - 05/05/2026 a 18/05/2026
+
+## Resumo da Sprint
+
+Nesta sprint, o foco foi colocar a mão na massa após receber a autorização dos mantenedores do KDE. O objetivo era corrigir o bug no script `live-setup`, que se perdia e montava a partição errada quando havia mais de um pendrive conectado.
+
+Tive que resolver vários problemas de ambiente na minha máquina virtual (falta de espaço no disco, configuração do Docker em BTRFS e erros de internet) até conseguir rodar a compilação (*build*) completa do sistema. No fim, abri o *Merge Request* oficial com sucesso.
+
+---
+
+# Atividades Realizadas
+
+| Data | Atividade | Tipo | Referência | Status |
+|------|------------|------|-------------|---------|
+| 05/05 | Atribuição oficial e orientação na Issue #82 | Discussão | KDE GitLab #82 | ✅ Concluído |
+| 08/05 | Configuração do Fork e ajuste de nome de autor no Git | Código | Terminal Git | ✅ Concluído |
+| 11/05 | Configuração do Docker para usar o driver BTRFS | Setup | `daemon.json` | ✅ Concluído |
+| 13/05 | Aumento do disco da máquina virtual de 30GB para 80GB | Setup | VirtualBox / KDE Partition | ✅ Concluído |
+| 16/05 | Limpeza de cache para resolver erro de pacote corrompido | Setup | Terminal | ✅ Concluído |
+| 17/05 | Compilação do sistema com sucesso (`build_docker.sh`) | Código | Terminal | ✅ Concluído |
+| 18/05 | Abertura do Merge Request com documentação em inglês | Doc / Código | KDE Invent MR | ✅ Concluído |
+| 18/05 | Investigação e relato da falha na Pipeline de testes | Análise | Logs do GitLab | ✅ Concluído |
+
+---
+
+# Maiores Avanços
+
+## 1. Correção Definitiva do Bug
+
+Mudei a forma como o script `live-setup` reconhece o pendrive. Em vez de procurar pelo nome (`by-label`), o que fazia ele pegar o primeiro que encontrasse, fiz o script olhar diretamente para o dispositivo que o sistema usou para dar boot (`/dev/gpt-auto-root`) e extrair a etiqueta dele usando o comando:
+
+```bash
+lsblk -no PARTLABEL
+```
+
+## 2. Configuração do Docker e Build
+
+Consegui configurar o Docker para rodar nativamente com o sistema de arquivos BTRFS (uma exigência do projeto) e finalmente gerei a imagem `.raw` do sistema operacional.
+
+---
+
+## 3. Submissão do Merge Request
+
+Abri o MR no repositório oficial do KDE com uma descrição clara em inglês, vinculando a correção à *issue* original para que ela seja fechada automaticamente após a aprovação.
+
+> **Inserir print do Merge Request aberto no GitLab aqui**
+
+![Print do Merge Request Aberto no KDE Invent](./assets/mr.jpeg)
+
+
+# Maiores Dificuldades
+
+- Falta de Espaço na Máquina Virtual (Disco Cheio): Meu disco virtual de 30GB lotou no meio do caminho. Tive que ir no VirtualBox, aumentar o disco para 80GB e usar o KDE Partition Manager para esticar a partição do Linux sem perder os dados.
+
+- Erro na Pipeline do GitLab (Falso Positivo): Assim que abri o *Merge Request*, a *pipeline* de testes do servidor falhou (ficou com status vermelho). Deu um frio na barriga, mas ao ler os logs detalhadamente, vi que o erro não era no meu código.
+
+Deixei um comentário no MR avisando os mantenedores sobre esse problema externo (*upstream*).
+
+![Print do erro da Pipeline no GitLab](./assets/comentario.jpeg)
+
+
+# Aprendizados
+
+- Como usar a ferramenta `mkosi` para compilar e criar imagens de sistemas operacionais;
+- Como redimensionar partições ativas de Linux (BTRFS) de forma segura;
+- Como corrigir erros no histórico de commits do Git usando o comando `git commit --amend`;
+- Como ler e interpretar logs de pipelines de CI/CD no GitLab para descobrir a verdadeira causa de um erro.
+
+# Plano Pessoal para a Próxima Sprint
+
+- [ ] Acompanhar o processo de *Code Review* e homologação efetuado pelo mantenedor Harald Sitter;
+
+- [ ] Aplicar eventuais refatorações ou revisões de código sugeridas pela comunidade do KDE;
+
+- [ ] Buscar nova issue.
