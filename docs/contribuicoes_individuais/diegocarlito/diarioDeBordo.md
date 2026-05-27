@@ -81,5 +81,44 @@ O foco desta sprint foi a contribuição direta para o projeto **KDE Linux Websi
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
-* [ ] Iniciar o mapeamento de *issues* de código (C++/Bash) para a próxima etapa de contribuição.
+* [x] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
+* [x] Iniciar o mapeamento de *issues* de código (C++/Bash) para a próxima etapa de contribuição.
+
+---
+
+## Sprint 2 – 11/05/2026 – 25/05/2026
+
+### Resumo da Sprint
+
+O foco desta sprint foi a transição para contribuições de código e infraestrutura. Dediquei a primeira metade da sprint ao estudo do fluxo de CI/CD e à análise de Merge Requests fechados para entender a arquitetura do projeto. Em seguida, realizei a triagem de *issues*, filtrando problemas de *upstream* fora de escopo. Selecionei a **Issue #579** (automação de notificações de falha em *nightly builds* via CI/CD) e iniciei a discussão arquitetural sobre integração de webhooks e logs com os mantenedores.
+
+### Atividades Realizadas
+
+| Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| --- | --- | --- | --- | --- |
+| 13/05 | Estudo do fluxo de *build* e infraestrutura de CI/CD do repositório | Estudo | [Arquivo `.gitlab-ci.yml` do projeto](https://invent.kde.org/diegocarlito/kde-linux/-/blob/master/.gitlab-ci.yml?ref_type=heads) | Concluído |
+| 16/05 | Acompanhamento, aprovação e *merge* da contribuição da Sprint 1 | Discussão/Revisão | [Aprovação do MR #4](https://invent.kde.org/websites/linux-kde-org/-/merge_requests/4#note_1497212) | Concluído |
+| 17/05 | Análise de MRs recentes para mapeamento de dependências e padrões de código | Estudo | [KDE Linux MRs](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/?sort=created_date&state=merged&first_page_size=100) | Concluído |
+| 21/05 | Triagem e filtragem avançada de issues aplicáveis para a disciplina | Pesquisa | [Board de Issues](https://invent.kde.org/kde-linux/kde-linux/-/work_items?sort=created_date&state=opened&label_name%5B%5D=Enhancement&not%5Blabel_name%5D%5B%5D=Upstream%20issue&first_page_size=100) | Concluído |
+| 24/05 | Escolha da Issue #579 e validação de requisitos de notificação | Discussão | [Issue #579](https://invent.kde.org/kde-linux/kde-linux/-/work_items/579), [Solicitação de *assign* e dúvidas](https://invent.kde.org/kde-linux/kde-linux/-/work_items/579#note_1504007) | Concluído |
+
+### Maiores Avanços
+
+* **Mapeamento Arquitetural:** Compreensão clara das diferenças entre bugs do ambiente KDE Linux, base Arch Linux e pacotes terceiros (*upstream*), otimizando a escolha de tarefas viáveis.
+* **Modelagem de Solução:** Definição prévia da arquitetura da Issue #579, estruturando a necessidade de extração em bash (`tail`) e disparo de *payloads* via API.
+
+### Maiores Dificuldades
+
+* **Garimpo de Issues:** Dificuldade inicial para encontrar demandas de código factíveis em curto prazo que não exigissem alterações em dependências externas (*upstream repos*).
+* **Escopo de Integração:** Ausência de documentação sobre a infraestrutura de comunicação interna do KDE (qual sala Matrix usar e quais variáveis de CI estão expostas para webhooks), exigindo o acionamento direto do mantenedor.
+
+### Aprendizados
+
+* Compreensão avançada das variáveis de ambiente e estágios do GitLab CI/CD.
+* Otimização de tempo por meio da identificação e rejeição rápida de tarefas fora do escopo técnico possível para a duração da sprint.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Desenvolver o script em Shell/Bash para capturar as últimas linhas de erro do *log* do CI.
+* [ ] Configurar os gatilhos no arquivo `.gitlab-ci.yml` e o *payload* de envio para a API do Matrix.
+* [ ] Submeter o Merge Request final com a funcionalidade implementada.
