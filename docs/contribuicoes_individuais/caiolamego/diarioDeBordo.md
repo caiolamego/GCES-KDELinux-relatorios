@@ -87,3 +87,64 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 * [x] Acompanhar a revisão (*Code Review*) do meu Merge Request pelos mantenedores do KDE.
 * [ ] Começar a contribuir em novas Issues, além de Newcomer, para ganhar mais experiência com o código.
 * [ ] Estudar o *codebase* com maior antecedência para a Sprint 2, buscando atuar ativamente em *issues* de código.
+
+
+#### Sprint 2
+
+##### Resumo da Sprint
+Nesta sprint, o objetivo foi aprofundar a contribuição no ecossistema do KDE Linux, focando em tarefas de configuração, integração e infraestrutura. O processo foi marcado por intensa comunicação com os mantenedores oficiais, exigindo adaptações rápidas (pivôs) no plano de ação original.
+
+
+##### Planejamento Inicial e Escolha da Issue #586
+A primeira tarefa selecionada para a Sprint 2 foi a **Issue #586: "Add a /etc/motd on the base OS explaining that most stuff is in Kapsule"**. A tarefa consistia em adicionar um banner de terminal (Message of the Day) na imagem base do sistema operacional, instruindo novos usuários sobre a natureza imutável do SO e direcionando-os ao uso do contêiner Kapsule. 
+
+Essa issue foi escolhida por ter um alto impacto na Experiência do Desenvolvedor (DevEx) e estar alinhada com o escopo de configuração de pacotes e infraestrutura.
+
+---
+
+###### Comunicação e Etiqueta Open Source (Matrix e GitLab)
+Seguindo o Código de Conduta do KDE, antes de submeter qualquer código, iniciei o processo de comunicação.
+Fui ao canal oficial do projeto no Matrix (`#kde-linux:kde.org`) para avisar a comunidade sobre a minha intenção de assumir a tarefa e pedi direcionamento técnico sobre onde os arquivos do `/etc/` eram populados durante o *build* (mkosi).
+
+![Matrix Sp2](./assets/sprint2/matrix.png)
+
+Em seguida, registrei formalmente o meu interesse comentando na própria Issue no GitLab.
+
+---
+
+###### Colaboração, Mentoria e Gerenciamento de Dependências
+A resposta da comunidade foi extremamente rápida, resultando em duas interações cruciais com os mantenedores principais do KDE Linux:
+
+**A. Mentoria Técnica:**
+O desenvolvedor Hadi Chokr respondeu ao meu comentário quase imediatamente, indicando o caminho exato para a injeção de arquivos: *"They are defined in the mkosi.extra folder"*. Isso demonstrou a alta colaboração da comunidade.
+
+![Issue Folder](./assets/sprint2/folder.png)
+
+**B. Bloqueio por Dependência de Roadmap:**
+Logo após eu iniciar a estruturação do código, o mantenedor líder (Nate Graham) interveio avisando que a Issue #586 era prematura. Ele explicou que a tarefa dependia da conclusão prévia da **Issue #584 (Full Kapsule integration)** [1] e que fazer o *Merge Request* agora direcionaria os usuários para um "canteiro de obras".
+
+![Issue Cancelada](./assets/sprint2/issue-canceled.png)
+
+**Ação Tomada:** Entendendo os princípios de evolução de software e dependências de *features*, concordei com o mantenedor, cancelei a alteração no código para evitar conflitos na base principal e me retirei da tarefa.
+
+![Resposta](./assets/sprint2/answer.png)
+
+---
+##### Maiores Avanços
+* **Gerenciamento de Dependências e Governança:** Consegui vivenciar o fluxo real de uma feature sendo bloqueada pelo roadmap do projeto. A Issue #586 exigia adicionar um aviso no `/etc/motd` sobre o Kapsule, mas o mantenedor Nate Graham interveio para informar que a integração do Kapsule (Issue #584) não estava pronta. 
+* **Mentoria e Código de Conduta:** A comunicação no Matrix antes de codificar funcionou perfeitamente. O desenvolvedor Hadi Chokr me respondeu quase imediatamente no GitLab, orientando que a injeção de arquivos ocorria na pasta `mkosi.extra`, poupando horas de busca na arquitetura do sistema. 
+* **Prática em Infraestrutura e CI/CD:** Com a Issue #581 (On-demand CI job to delete the latest build), mudei o escopo de configuração local (`mkosi`) para focar na Integração Contínua em nuvem, manipulando os pipelines do GitLab para adicionar tarefas de cleanup sob demanda. 
+
+##### Maiores Dificuldades
+* **Bloqueio de Tarefa no Meio da Execução:** A paralisação da Issue #586 logo após o início do trabalho me forçou a reorganizar a sprint de última hora e a justificar de forma profissional minha saída da tarefa.
+* **Concorrência por Issues Newcomer:** A tentativa de pivotar para a Issue #579 (notificação de erro no pipeline) falhou pois a alta concorrência na comunidade e a escassez de issues com a label `Newcomer` fizeram com que ela já estivesse tomada.
+* **Compreensão de Pipelines de CI:** Aprender a estrutura do `.gitlab-ci.yml` do projeto para injetar de forma segura um job `when: manual` sem quebrar o restante da integração contínua do repositório principal exigiu grande esforço investigativo.
+
+##### Aprendizados
+* **O Valor da Comunicação Prévia:** Salvei horas de trabalho. Se eu tivesse feito o Merge Request da #586 em silêncio, ele seria rejeitado por expor uma funcionalidade incompleta.
+* **Ecossistema Mkosi:** Mesmo não finalizando a #586, ganhei um conhecimento técnico sobre a montagem de imagens de sistemas imutáveis usando `mkosi`, e como as customizações são injetadas no nível raiz através de arquivos de configuração, ao invés da compilação tradicional.
+
+##### Plano Pessoal para a Próxima Sprint
+* [ ] **Acompanhar o Code Review da Issue #581:** Responder rapidamente a qualquer feedback dos mantenedores no GitLab em relação ao meu Merge Request de CI/CD e realizar as adaptações pedidas.
+* [ ] **Explorar Testes Fim-a-Fim (E2E):** Procurar tarefas relacionadas à testagem da interface e funcionalidades do sistema base, expandindo o escopo de contribuição além de documentação e CI/CD.
+* [ ] **Manter a Pró-atividade:** Caso as issues de prioridade e de "Newcomer" continuem esgotadas, propor mais refinamentos administrativos e de repositório, garantindo meu engajamento ativo na comunidade do KDE.
