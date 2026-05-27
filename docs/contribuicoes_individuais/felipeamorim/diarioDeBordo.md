@@ -188,3 +188,41 @@ Nesse Sprint, meu foco foi conseguir identificar uma issue adequada para inician
 * [ ] Fazer o empacotamento do thumbnailer de arquivos STL utilizando o Flatpak, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
 * [ ] Abrir o pull request e começar a implementar as alterações necessárias na codebase do KDE Linux para integrar o thumbnailer de arquivos STL.
 * [ ] Interagir com os mantenedores e outros membros da comunidade para tirar dúvidas, receber feedback e ajustar a contribuição conforme necessário para garantir que ela seja aceita e integrada ao projeto.
+
+---
+
+## Sprint 2 – 08/05 - 22/05
+
+### Resumo da Sprint
+
+Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos STL utilizando o Flatpak, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto. Consegui gerar o pacote Flatpak do thumbnailer `stl2thumbnail` e disponibilizar o pacote em um repositório público no GitHub, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
+| ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
+| 01/05 | Escolha do thumbnailer `stl2thumbnail` de acordo com o feedback dos mantenedores na Issue | Discussão | [stl2thumbnail](https://github.com/krepa098/stl2thumbnail), [Comentário a issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1486260) | Concluído |
+| 01/05 | Criação de repositório para disponibilizar o pacote Flatpak e o manifesto usado | Documentação | [Repositório](https://github.com/lipeaaraujo/stl2thumbnail-flatpak) | Concluído |
+| 01/05 | Empacotamento em Flatpak do STL thumbnailer  | Código | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 01/05 | Geração da release no repositório com o bundler do thumbnailer | Documentação | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 01/05 | Mensagem na issue com os links do repositório e release para review dos mantenedores | Discussão | [Mensagem na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1503966) | Concluído |
+
+### Maiores Avanços
+
+* Geração do pacote Flatpak do thumbnailer `stl2thumbnail` e disponibilização do pacote em um repositório público no GitHub, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
+
+### Maiores Dificuldades
+
+* Acabei não recebendo feedback sobre a última mensagem na issue o que não me possibilitou a dar continuidade a contribuição, mas acredito que isso se deve ao fato de os mantenedores estarem ocupados com outras demandas do projeto. De qualquer forma, pretendo continuar acompanhando a issue e interagindo com os mantenedores para garantir que minha contribuição seja integrada ao projeto.
+* Pessoalmente também demorei para começar a implementação do empacotamento do thumbnailer, o que atrasou um pouco o processo de contribuição. Para a próxima Sprint, pretendo me organizar melhor para conseguir dar continuidade à contribuição de forma mais fluida e eficiente.
+
+### Aprendizados
+
+* **Processo de empacotamento de aplicativos utilizando o Flatpak**: Aprendi sobre o processo de empacotamento de aplicativos utilizando o Flatpak, incluindo a criação do manifesto, configuração das dependências e geração do pacote Flatpak, o que me permitiu realizar a contribuição de forma eficiente e seguindo as diretrizes do projeto.
+* **Importância de se comunicar melhor com os mantenedores do projeto**: Percebi a importância de manter uma comunicação clara e frequente com os mantenedores do projeto, para garantir que a contribuição esteja alinhada com as expectativas do projeto e para receber feedbacks que possam ajudar a melhorar a contribuição.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Aguardar o feedback dos mantenedores sobre a última mensagem na issue para dar continuidade à contribuição, realizando as alterações necessárias conforme o feedback recebido para garantir que a contribuição seja aceita e integrada ao projeto.
+* [ ] Começar outra contribuição para o projeto, escolhendo outra issue com a tag `Newcomer` ou outra tarefa adequada para iniciantes, e seguir o processo de contribuição do projeto para realizar a contribuição de forma eficiente e colaborativa com a comunidade do projeto.
+* [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
