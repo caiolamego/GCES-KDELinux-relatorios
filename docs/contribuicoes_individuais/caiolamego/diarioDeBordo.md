@@ -132,8 +132,7 @@ Logo após eu iniciar a estruturação do código, o mantenedor líder (Nate Gra
 ---
 ##### Maiores Avanços
 * **Gerenciamento de Dependências e Governança:** Consegui vivenciar o fluxo real de uma feature sendo bloqueada pelo roadmap do projeto. A Issue #586 exigia adicionar um aviso no `/etc/motd` sobre o Kapsule, mas o mantenedor Nate Graham interveio para informar que a integração do Kapsule (Issue #584) não estava pronta. 
-* **Mentoria e Código de Conduta:** A comunicação no Matrix antes de codificar funcionou perfeitamente. O desenvolvedor Hadi Chokr me respondeu quase imediatamente no GitLab, orientando que a injeção de arquivos ocorria na pasta `mkosi.extra`, poupando horas de busca na arquitetura do sistema. 
-* **Prática em Infraestrutura e CI/CD:** Com a Issue #581 (On-demand CI job to delete the latest build), mudei o escopo de configuração local (`mkosi`) para focar na Integração Contínua em nuvem, manipulando os pipelines do GitLab para adicionar tarefas de cleanup sob demanda. 
+* **Mentoria e Código de Conduta:** A comunicação no Matrix antes de codificar funcionou perfeitamente. O desenvolvedor Hadi Chokr me respondeu quase imediatamente no GitLab, orientando que a injeção de arquivos ocorria na pasta `mkosi.extra`, poupando horas de busca na arquitetura do sistema.
 
 ##### Maiores Dificuldades
 * **Bloqueio de Tarefa no Meio da Execução:** A paralisação da Issue #586 logo após o início do trabalho me forçou a reorganizar a sprint de última hora e a justificar de forma profissional minha saída da tarefa.
@@ -143,8 +142,3 @@ Logo após eu iniciar a estruturação do código, o mantenedor líder (Nate Gra
 ##### Aprendizados
 * **O Valor da Comunicação Prévia:** Salvei horas de trabalho. Se eu tivesse feito o Merge Request da #586 em silêncio, ele seria rejeitado por expor uma funcionalidade incompleta.
 * **Ecossistema Mkosi:** Mesmo não finalizando a #586, ganhei um conhecimento técnico sobre a montagem de imagens de sistemas imutáveis usando `mkosi`, e como as customizações são injetadas no nível raiz através de arquivos de configuração, ao invés da compilação tradicional.
-
-##### Plano Pessoal para a Próxima Sprint
-* [ ] **Acompanhar o Code Review da Issue #581:** Responder rapidamente a qualquer feedback dos mantenedores no GitLab em relação ao meu Merge Request de CI/CD e realizar as adaptações pedidas.
-* [ ] **Explorar Testes Fim-a-Fim (E2E):** Procurar tarefas relacionadas à testagem da interface e funcionalidades do sistema base, expandindo o escopo de contribuição além de documentação e CI/CD.
-* [ ] **Manter a Pró-atividade:** Caso as issues de prioridade e de "Newcomer" continuem esgotadas, propor mais refinamentos administrativos e de repositório, garantindo meu engajamento ativo na comunidade do KDE.
