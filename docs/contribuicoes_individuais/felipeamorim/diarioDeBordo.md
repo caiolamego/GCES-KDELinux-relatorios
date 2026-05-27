@@ -195,7 +195,7 @@ Nesse Sprint, meu foco foi conseguir identificar uma issue adequada para inician
 
 ### Resumo da Sprint
 
-<!-- Nesse Sprint, meu foco foi conseguir identificar uma issue adequada para iniciantes no repositório do KDE Linux e realizar minha primeira contribuição com código. Consegui encontrar uma issue com a tag `Newcomer` relacionada à implementação de um recurso de pré-visualização de arquivos STL, e entrei em contato com a comunidade do projeto para solicitar autorização para trabalhar nela como parte de uma atividade acadêmica. -->
+Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos STL utilizando o Flatpak, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto. Consegui gerar o pacote Flatpak do thumbnailer `stl2thumbnail` e disponibilizar o pacote em um repositório público no GitHub, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
 
 ### Atividades Realizadas
 
@@ -209,25 +209,20 @@ Nesse Sprint, meu foco foi conseguir identificar uma issue adequada para inician
 
 ### Maiores Avanços
 
-<!-- * **Identificação de uma issue adequada para iniciantes**: Consegui encontrar uma issue com a tag `Newcomer` relacionada à implementação de um recurso de pré-visualização de arquivos STL, o que me permitiu escolher uma tarefa adequada para começar a contribuir com código no projeto. -->
-<!-- * **Contato com a comunidade para solicitar autorização para contribuir**: Entrei em contato com os mantenedores do projeto através da issue para solicitar autorização para trabalhar na issue escolhida como parte de uma atividade acadêmica, e recebi uma resposta positiva autorizando minha contribuição e dando mais instruções sobre como proceder. -->
-<!-- * **Estudo sobre o formato STL, STL thumbnailers disponíveis e o gerenciador de pacotes Flatpak**: Realizei um estudo aprofundado sobre o formato de arquivos STL, os thumbnailers de arquivos STL disponíveis e o gerenciador de pacotes Flatpak, o que me permitiu entender melhor o contexto técnico da issue escolhida e me preparar para realizar a contribuição de forma mais eficiente. -->
 * Geração do pacote Flatpak do thumbnailer `stl2thumbnail` e disponibilização do pacote em um repositório público no GitHub, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto.
 
 ### Maiores Dificuldades
 
-<!-- * **Poucas issues abertas para novos contribuidores**: Notei que existem poucas issues abertas com a tag `Newcomer`, o que dificultou a identificação de tarefas mais simples para que eu pudesse começar a contribuir. -->
-<!-- * **Entender o contexto técnico da issue escolhida**: A issue escolhida envolve conceitos técnicos relacionados ao formato de arquivos STL, thumbnailers e empacotamento de aplicativos com Flatpak, o que exigiu um estudo aprofundado para entender o contexto e os requisitos técnicos necessários para realizar a contribuição de forma eficiente. -->
+* Acabei não recebendo feedback sobre a última mensagem na issue o que não me possibilitou a dar continuidade a contribuição, mas acredito que isso se deve ao fato de os mantenedores estarem ocupados com outras demandas do projeto. De qualquer forma, pretendo continuar acompanhando a issue e interagindo com os mantenedores para garantir que minha contribuição seja integrada ao projeto.
+* Pessoalmente também demorei para começar a implementação do empacotamento do thumbnailer, o que atrasou um pouco o processo de contribuição. Para a próxima Sprint, pretendo me organizar melhor para conseguir dar continuidade à contribuição de forma mais fluida e eficiente.
 
 ### Aprendizados
 
-<!-- * **Identificar uma issue adequada para iniciantes**: Aprendi a importância de analisar bem as issues disponíveis no repositório para identificar aquelas que são adequadas para iniciantes, levando em consideração o nível de complexidade, os requisitos técnicos e o contexto da tarefa. -->
-<!-- * **Contato com a comunidade para solicitar autorização para contribuir**: Entendi como funciona o processo de contato com os mantenedores de um projeto de software livre para solicitar autorização para contribuir, e a importância de ser claro e educado na comunicação para estabelecer uma boa relação com a comunidade do projeto. -->
-<!-- * **Estudo sobre o formato STL, STL thumbnailers disponíveis e o gerenciador de pacotes Flatpak**: Aprendi sobre o formato de arquivos STL, os thumbnailers de arquivos STL disponíveis e o gerenciador de pacotes Flatpak, o que me permitiu entender melhor o contexto técnico da issue escolhida e me preparar para realizar a contribuição de forma mais eficiente. -->
-<!-- * **Importância de entender o contexto técnico de uma issue antes de começar a contribuir**: Percebi que é fundamental entender o contexto técnico de uma issue antes de começar a trabalhar nela, para garantir que a contribuição seja feita de forma eficiente e atenda aos requisitos técnicos necessários. -->
+* **Processo de empacotamento de aplicativos utilizando o Flatpak**: Aprendi sobre o processo de empacotamento de aplicativos utilizando o Flatpak, incluindo a criação do manifesto, configuração das dependências e geração do pacote Flatpak, o que me permitiu realizar a contribuição de forma eficiente e seguindo as diretrizes do projeto.
+* **Importância de se comunicar melhor com os mantenedores do projeto**: Percebi a importância de manter uma comunicação clara e frequente com os mantenedores do projeto, para garantir que a contribuição esteja alinhada com as expectativas do projeto e para receber feedbacks que possam ajudar a melhorar a contribuição.
 
 ### Plano Pessoal para a Próxima Sprint
 
-<!-- * [ ] Fazer o empacotamento do thumbnailer de arquivos STL utilizando o Flatpak, seguindo as instruções e diretrizes fornecidas pelos mantenedores do projeto. -->
-<!-- * [ ] Abrir o pull request e começar a implementar as alterações necessárias na codebase do KDE Linux para integrar o thumbnailer de arquivos STL. -->
-<!-- * [ ] Interagir com os mantenedores e outros membros da comunidade para tirar dúvidas, receber feedback e ajustar a contribuição conforme necessário para garantir que ela seja aceita e integrada ao projeto. -->
+* [ ] Aguardar o feedback dos mantenedores sobre a última mensagem na issue para dar continuidade à contribuição, realizando as alterações necessárias conforme o feedback recebido para garantir que a contribuição seja aceita e integrada ao projeto.
+* [ ] Começar outra contribuição para o projeto, escolhendo outra issue com a tag `Newcomer` ou outra tarefa adequada para iniciantes, e seguir o processo de contribuição do projeto para realizar a contribuição de forma eficiente e colaborativa com a comunidade do projeto.
+* [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
