@@ -201,11 +201,11 @@ Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos S
 
 | Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
 | ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
-| 01/05 | Escolha do thumbnailer `stl2thumbnail` de acordo com o feedback dos mantenedores na Issue | Discussão | [stl2thumbnail](https://github.com/krepa098/stl2thumbnail), [Comentário a issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1486260) | Concluído |
-| 01/05 | Criação de repositório para disponibilizar o pacote Flatpak e o manifesto usado | Documentação | [Repositório](https://github.com/lipeaaraujo/stl2thumbnail-flatpak) | Concluído |
-| 01/05 | Empacotamento em Flatpak do STL thumbnailer  | Código | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
-| 01/05 | Geração da release no repositório com o bundler do thumbnailer | Documentação | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
-| 01/05 | Mensagem na issue com os links do repositório e release para review dos mantenedores | Discussão | [Mensagem na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1503966) | Concluído |
+| 08/05 | Escolha do thumbnailer `stl2thumbnail` de acordo com o feedback dos mantenedores na Issue | Discussão | [stl2thumbnail](https://github.com/krepa098/stl2thumbnail), [Comentário a issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1486260) | Concluído |
+| 15/05 | Criação de repositório para disponibilizar o pacote Flatpak e o manifesto usado | Documentação | [Repositório](https://github.com/lipeaaraujo/stl2thumbnail-flatpak) | Concluído |
+| 15/05 | Empacotamento em Flatpak do STL thumbnailer  | Código | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 22/05 | Geração da release no repositório com o bundler do thumbnailer | Documentação | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 22/05 | Mensagem na issue com os links do repositório e release para review dos mantenedores | Discussão | [Mensagem na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1503966) | Concluído |
 
 ### Maiores Avanços
 
