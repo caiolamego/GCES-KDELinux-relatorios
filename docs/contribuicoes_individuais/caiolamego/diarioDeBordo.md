@@ -92,7 +92,7 @@ Nesta sprint, o foco absoluto foi realizar a primeira contribuição real para o
 #### Sprint 2
 
 ##### Resumo da Sprint
-Nesta sprint, o objetivo foi aprofundar a contribuição no ecossistema do KDE Linux, focando em tarefas de configuração, integração e infraestrutura. O processo foi marcado por intensa comunicação com os mantenedores oficiais, exigindo adaptações rápidas (pivôs) no plano de ação original.
+Nesta sprint, o objetivo foi aprofundar a contribuição no ecossistema do KDE Linux, focando em tarefas de configuração, integração e infraestrutura. O processo foi marcado por intensa comunicação com os mantenedores oficiais, exigindo adaptações rápidas (pivôs) no plano de ação original devido à altíssima concorrência. Tentei assumir múltiplas tarefas (Issues #586, #578 e #21), vivenciando na prática os desafios de governança, concorrência interna da equipe, dependências de roadmap e alocação de tarefas distribuídas em um projeto Open Source em fase Beta.
 
 
 ##### Planejamento Inicial e Escolha da Issue #586
@@ -100,7 +100,6 @@ A primeira tarefa selecionada para a Sprint 2 foi a **Issue #586: "Add a /etc/mo
 
 Essa issue foi escolhida por ter um alto impacto na Experiência do Desenvolvedor (DevEx) e estar alinhada com o escopo de configuração de pacotes e infraestrutura.
 
----
 
 ###### Comunicação e Etiqueta Open Source (Matrix e GitLab)
 Seguindo o Código de Conduta do KDE, antes de submeter qualquer código, iniciei o processo de comunicação.
@@ -128,6 +127,13 @@ Logo após eu iniciar a estruturação do código, o mantenedor líder (Nate Gra
 **Ação Tomada:** Entendendo os princípios de evolução de software e dependências de *features*, concordei com o mantenedor, cancelei a alteração no código para evitar conflitos na base principal e me retirei da tarefa.
 
 ![Resposta](./assets/sprint2/answer.png)
+
+##### Tentativas de novas issues e alta concorrência (Issues #578 e #21)
+Com a paralisação da #586, iniciei uma busca por novas opções de contribuição, focando em CI/CD:
+1. **Issue #578 ("On-demand CI job to delete the latest build"):** Escolhi esta tarefa por envolver a manipulação de jobs sob demanda no pipeline. Contudo, rapidamente descobri que ela já havia sido assumida por outro mantenedor, o que inviabilizou minha atuação.
+2. **Issue #21 ("Loud notification on nightly build failure" - kde-linux-packages):** Encontrei esta issue com a tag `Newcomer`. Ao demonstrar interesse, o mantenedor Nate Graham me respondeu explicando que essa tarefa era a "outra metade" da Issue #579 (do repositório principal). Mais uma vez não foi possível realizar uma issue que teoricamente estava livre para desenvolver, mesmo com a tag de Newcomer.
+
+![Issue Negada](./assets/sprint2/issue_negada.png)
 
 ---
 ##### Maiores Avanços
