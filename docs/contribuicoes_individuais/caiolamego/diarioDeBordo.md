@@ -148,3 +148,123 @@ Com a paralisação da #586, iniciei uma busca por novas opções de contribuiç
 ##### Aprendizados
 * **O Valor da Comunicação Prévia:** Salvei horas de trabalho. Se eu tivesse feito o Merge Request da #586 em silêncio, ele seria rejeitado por expor uma funcionalidade incompleta.
 * **Ecossistema Mkosi:** Mesmo não finalizando a #586, ganhei um conhecimento técnico sobre a montagem de imagens de sistemas imutáveis usando `mkosi`, e como as customizações são injetadas no nível raiz através de arquivos de configuração, ao invés da compilação tradicional.
+
+
+#### Sprint 3
+
+##### Resumo da Sprint
+
+Nesta sprint, retomei a **Issue #21 do repositório `kde-linux-packages`**, relacionada à criação de uma notificação para falhas nas compilações noturnas do KDE Linux. A tarefa foi desenvolvida em conjunto com Diego Souza: ele ficou responsável pela **Issue #579 no repositório principal `kde-linux`**, enquanto eu adaptei a mesma solução para o pipeline de construção dos pacotes.
+
+Essa divisão foi definida após uma conversa com o mantenedor Nate Graham. Como as duas issues representavam partes do mesmo problema, trabalhamos de forma coordenada para manter a mesma arquitetura e o mesmo padrão de implementação nos dois repositórios.
+
+Ao final da sprint, implementei a solução, realizei os testes necessários e abri o **Merge Request !101** no repositório `kde-linux-packages`.
+
+**Links:**
+
+* [Issue #21 — kde-linux-packages](https://invent.kde.org/kde-linux/kde-linux-packages/-/work_items/21)
+* [Issue #579 — kde-linux]([https://invent.kde.org/kde-linux/kde-linux/-/work_items/579)
+* [Merge Request !101](https://invent.kde.org/kde-linux/kde-linux-packages/-/merge_requests/101)
+
+##### Atividades Realizadas
+
+| Atividade                                           | Tipo                   | Status    |
+| --------------------------------------------------- | ---------------------- | --------- |
+| Alinhamento da implementação com Diego Souza        | Discussão/Planejamento | Concluído |
+| Análise do `.gitlab-ci.yml` do `kde-linux-packages` | Estudo/Código          | Concluído |
+| Criação do script `notify_matrix.sh`                | Código                 | Concluído |
+| Configuração da captura do log de compilação        | CI/CD                  | Concluído |
+| Inclusão do `jq` como dependência do ambiente       | Configuração           | Concluído |
+| Testes locais do script e do payload JSON           | Testes                 | Concluído |
+| Abertura do Merge Request !101                      | Código                 | Concluído |
+
+##### Colaboração nas Issues #579 e #21
+
+Na sprint anterior, o mantenedor Nate Graham havia informado que a Issue #21 era a outra metade da Issue #579. Posteriormente, Diego e eu comunicamos à comunidade que trabalharíamos juntos: ele implementaria a solução no repositório principal e eu faria a adaptação no repositório de pacotes.
+
+A implementação do Diego passou por revisão dos mantenedores, que solicitaram ajustes como a inclusão dos cabeçalhos SPDX. A partir dessa revisão, utilizei a mesma arquitetura no meu código, evitando criar duas soluções diferentes para o mesmo problema.
+
+<!-- INSERIR PRINT DA CONVERSA NA ISSUE MOSTRANDO A PARCERIA COM DIEGO -->
+
+![Colaboração com Diego](./assets/sprint3/caio_diego.png)
+
+##### Implementação da Notificação no Matrix
+
+Foi criado o script executável `notify_matrix.sh`, responsável por enviar uma mensagem para uma sala do Matrix quando o job de compilação falhar.
+
+O script:
+
+* verifica se a variável de CI/CD `MATRIX_WEBHOOK_URL` está configurada;
+* recebe o arquivo `build.log`;
+* extrai as últimas 15 linhas do log com o comando `tail`;
+* cria um payload JSON seguro utilizando `jq`;
+* inclui na mensagem o nome do projeto e o link da pipeline;
+* envia a notificação para o Matrix utilizando `curl`.
+
+O arquivo foi versionado com permissão de execução `100755`.
+
+##### Alterações no Pipeline do GitLab
+
+Durante a análise do `.gitlab-ci.yml`, identifiquei que as compilações noturnas utilizavam o mesmo job `build`. Esse job foi ajustado para salvar as saídas e os erros no arquivo `build.log` sem esconder possíveis falhas do `build.sh`. Também foi adicionado um `after_script` que executa o `notify_matrix.sh` somente quando o job falha, enviando a notificação com as informações do erro.
+
+
+##### Gerenciamento da Dependência `jq`
+
+O script utiliza `jq` para gerar com segurança o JSON da notificação. Como não foi possível confirmar sua presença na imagem de CI da KDE por meio do Docker, o pacote foi adicionado ao `bootstrap.sh`, garantindo que a dependência seja instalada durante a preparação do ambiente.
+
+
+##### Testes Realizados
+
+Antes de abrir o Merge Request, realizei testes para verificar:
+
+* a sintaxe do script com `bash -n`;
+* a análise estática com `shellcheck`;
+* o comportamento quando `MATRIX_WEBHOOK_URL` não está configurada;
+* o comportamento quando o arquivo de log não existe;
+* a seleção correta das últimas 15 linhas;
+* a criação de um JSON válido com caracteres especiais;
+* a permissão executável do arquivo;
+* a ausência de erros de formatação no diff do Git.
+
+Também foi utilizado um servidor HTTP local para simular o webhook e inspecionar o payload enviado pelo script, sem expor ou utilizar uma URL real do Matrix.
+
+##### Abertura do Merge Request !101
+
+Após concluir a implementação e os testes, enviei a branch para o meu fork e abri o **Merge Request !101** para a branch `master` do repositório oficial.
+
+O MR apresenta as alterações realizadas no `notify_matrix.sh`, no `.gitlab-ci.yml` e no `bootstrap.sh`, além de explicar aos mantenedores que a variável `MATRIX_WEBHOOK_URL` precisa ser configurada no projeto oficial.
+
+![Merge Request !101](./assets/sprint3/mr101.png)
+
+**Link:** [Merge Request !101](https://invent.kde.org/kde-linux/kde-linux-packages/-/merge_requests/101)
+
+ALém disso, o pipeline continuou passando corretamente, conforme previsto:
+
+![Pipeline](./assets/sprint3/pipeline.png)
+
+##### Maiores Avanços
+
+* **Primeira contribuição focada em CI/CD:** Diferentemente da contribuição anterior, que estava relacionada à documentação, esta sprint envolveu a modificação direta do pipeline de integração contínua do projeto.
+* **Colaboração entre repositórios:** A solução foi desenvolvida em conjunto com Diego, mantendo a padronização entre o `kde-linux` e o `kde-linux-packages`.
+* **Tratamento seguro de logs e segredos:** A URL do webhook não foi inserida no código. Ela será fornecida por uma variável protegida do GitLab CI/CD.
+* **Integração com a comunidade:** A implementação seguiu a arquitetura que já havia sido revisada pelos mantenedores na Issue #579.
+
+##### Maiores Dificuldades
+
+* **Compreensão do comportamento de pipes no shell:** Foi necessário compreender que o uso de `tee` poderia esconder a falha do comando de build sem a configuração `pipefail`.
+* **Validação do ambiente da CI:** A imagem utilizada pela infraestrutura da KDE não pôde ser executada diretamente pelo Docker local, exigindo uma solução alternativa para garantir a instalação do `jq`.
+* **Adaptação entre repositórios:** Apesar de as duas issues tratarem do mesmo problema, os arquivos e jobs dos pipelines eram diferentes, sendo necessário identificar corretamente onde aplicar a solução no `kde-linux-packages`.
+
+##### Aprendizados
+
+* Alterações em CI/CD precisam ser testadas e revisadas com o mesmo cuidado de funcionalidades tradicionais.
+* Aprendi como pipelines de comandos podem mascarar códigos de erro e como preservar corretamente uma falha ao utilizar `tee`.
+* Reutilizar uma arquitetura já revisada reduz divergências, facilita o trabalho dos mantenedores e torna a solução mais consistente entre repositórios.
+
+##### Plano Pessoal para a Próxima Sprint
+
+* [ ] Acompanhar a pipeline e o processo de revisão do Merge Request !101.
+* [ ] Responder aos comentários dos mantenedores e aplicar eventuais ajustes solicitados.
+* [ ] Marcar as discussões como resolvidas após implementar as correções.
+* [ ] Acompanhar a configuração da variável `MATRIX_WEBHOOK_URL` no projeto oficial.
+* [ ] Registrar o resultado final do Merge Request, incluindo sua aprovação ou integração ao repositório.
