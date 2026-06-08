@@ -167,4 +167,4 @@ Paralelamente, dediquei forte esforço à finalização da infraestrutura do Tra
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] 
+* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
