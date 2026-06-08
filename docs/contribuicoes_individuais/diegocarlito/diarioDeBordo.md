@@ -152,16 +152,18 @@ Paralelamente, dediquei forte esforço à finalização da infraestrutura do Tra
 ### Maiores Avanços
 
 * **Entrega de Código (*Upstream*):** Tradução do planejamento arquitetural da Issue #579 em código real, culminando na abertura do MR #542 no repositório do KDE Linux, estabelecendo a primeira grande entrega técnica na organização.
-* **Maturidade em Infraestrutura (GCES):** Conclusão bem-sucedida do pipeline de CI/CD para o trabalho final, garantindo a exibição do *badge* do pipeline e consolidando a validação de qualidade de código através do SonarCloud.
+* **Maturidade em Infraestrutura:** Conclusão bem-sucedida do pipeline de CI/CD para o trabalho final, garantindo a exibição do *badge* do pipeline e consolidando a validação de qualidade de código através do SonarCloud.
 * **Gestão de Múltiplas Entregas:** Capacidade de orquestrar e entregar simultaneamente contribuições Open Source, projetos complexos de infraestrutura e demandas analíticas.
 
 ### Maiores Dificuldades
 
-* 
+* **Ciclo de Revisão Assíncrono:** Interpretar tecnicamente os apontamentos e restrições de arquitetura deixados pelo mantenedor no MR #542, entendendo o alto rigor de aceitação de código do ecossistema KDE.
+* **Mudança Constante de Contexto:** Transitar rapidamente entre o desenvolvimento em Bash para automação de CI, o ambiente de orquestração e análise de qualidade e a stack voltada para Machine Learning no mesmo final de semana.
 
 ### Aprendizados
 
-* 
+* Vivência prática na dinâmica de *code review* de projetos Open Source de grande porte, compreendendo como absorver críticas estruturais de mantenedores seniores e preparar iterações de código.
+* Consolidação definitiva dos conceitos de integração contínua (CI) e inspeção contínua de código, fechando o ciclo de evolução do projeto de Gerência de Configuração.
 
 ### Plano Pessoal para a Próxima Sprint
 
