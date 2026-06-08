@@ -151,7 +151,9 @@ Paralelamente, dediquei forte esforço à finalização da infraestrutura do Tra
 
 ### Maiores Avanços
 
-* 
+* **Entrega de Código (*Upstream*):** Tradução do planejamento arquitetural da Issue #579 em código real, culminando na abertura do MR #542 no repositório do KDE Linux, estabelecendo a primeira grande entrega técnica na organização.
+* **Maturidade em Infraestrutura (GCES):** Conclusão bem-sucedida do pipeline de CI/CD para o trabalho final, garantindo a exibição do *badge* do pipeline e consolidando a validação de qualidade de código através do SonarCloud.
+* **Gestão de Múltiplas Entregas:** Capacidade de orquestrar e entregar simultaneamente contribuições Open Source, projetos complexos de infraestrutura e demandas analíticas.
 
 ### Maiores Dificuldades
 
