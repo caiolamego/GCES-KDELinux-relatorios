@@ -122,3 +122,45 @@ O foco desta sprint foi a transição para contribuições de código e infraest
 * [ ] Desenvolver o script em Shell/Bash para capturar as últimas linhas de erro do *log* do CI.
 * [ ] Configurar os gatilhos no arquivo `.gitlab-ci.yml` e o *payload* de envio para a API do Matrix.
 * [ ] Submeter o Merge Request final com a funcionalidade implementada.
+
+---
+
+## Sprint 3 – 25/05/2026 – 08/06/2026
+
+### Resumo da Sprint
+
+Esta sprint foi marcada pela execução prática e entrega de demandas críticas em múltiplas frentes. No escopo do KDE, aprofundei as interações com a comunidade adotando uma estratégia de colaboração e apoio mútuo com outros desenvolvedores e estudantes, como o [Caio Lamego](https://github.com/caiolamego), engajando nas *issues* dele para fortalecer nossa presença e inserção no projeto. 
+
+O foco principal foi escrever e submeter o Merge Request da Issue #579 (script de notificação de falhas). Para resolver esse problema, desenvolvi um script em Bash acoplado ao CI/CD que captura automaticamente as últimas linhas dos logs de erro em caso de falha nas *nightly builds*. O meu MR acrescenta essa inteligência ao repositório configurando um gatilho que extrai o erro, formata o *payload* e o dispara via webhook diretamente para a sala Matrix dos desenvolvedores, acelerando significativamente a triagem e correção de problemas na infraestrutura. O código passou por duas rodadas de *code review* detalhado com os mantenedores. 
+
+Paralelamente, dediquei forte esforço à finalização da infraestrutura do Trabalho Final de GCES, configurando pipelines e integração com SonarCloud, além de concluir e submeter o Projeto 4 (nota extra) para a disciplina de Tópicos Especiais em Engenharia de Software.
+
+### Atividades Realizadas
+
+| Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| --- | --- | --- | --- | --- |
+| 05/06 | Apoio e discussão técnica na Issue #21 do KDE | Discussão | [Comentário Issue #21](https://invent.kde.org/kde-linux/kde-linux-packages/-/work_items/21#note_1514708) | Concluído |
+| 05/06 | Início do desenvolvimento do Projeto 4 (Nota Extra) | Código | [Instruções do projeto](https://github.com/unb-Sistemas-de-Machine-learning/Projetos-Individuais-2026-1/blob/main/projeto-individual-4/README.md) | Concluído |
+| 06/06 | Submissão do Merge Request com a automação de logs | Código | [MR #542](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/542) | Concluído |
+| 06/06 | Análise de feedbacks | Revisão | [Feedback 1](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/542#note_1515147), <br> [Feedback 2](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/542#note_1515184) | Concluído |
+| 06/06 | Início da configuração de infraestrutura do Trabalho Final de GCES (Pipeline CI/CD) | Código/Infra | [Instruções do Trabalho Final de GCES](https://gitlab.com/unb-esw/gces/gces2026-1/projetoindividual) | Concluído |
+| 07/06 | Continuação do desenvolvimento de código do Projeto 4 | Código | [Branch do Projeto](https://github.com/DiegoCarlito/Projetos-Individuais-2026-1/tree/projeto-4-diego-souza/diego-carlito-rodrigues-de-souza/projeto-4) | Concluído |
+| 08/06 | Conclusão do Trabalho Final de GCES | Infra | [SonarCloud](https://sonarcloud.io/project/overview?id=trabalho-final-gces-diego-souza), <br>  [Pipeline CI/CD do Trabalho Final de GCES](assets/projeto_individual_pipeline.png) | Concluído |
+| 08/06 | Finalização do código do Projeto 4 | Código | [Branch do Projeto](https://github.com/DiegoCarlito/Projetos-Individuais-2026-1/tree/projeto-4-diego-souza/diego-carlito-rodrigues-de-souza/projeto-4) | Concluído |
+| 08/06 | Submissão do Pull Request do Projeto 4 | Código | [PR #62](https://github.com/unb-Sistemas-de-Machine-learning/Projetos-Individuais-2026-1/pull/62) | Concluído |
+
+### Maiores Avanços
+
+* 
+
+### Maiores Dificuldades
+
+* 
+
+### Aprendizados
+
+* 
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] 
