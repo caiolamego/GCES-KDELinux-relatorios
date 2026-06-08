@@ -119,9 +119,9 @@ O foco desta sprint foi a transição para contribuições de código e infraest
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Desenvolver o script em Shell/Bash para capturar as últimas linhas de erro do *log* do CI.
-* [ ] Configurar os gatilhos no arquivo `.gitlab-ci.yml` e o *payload* de envio para a API do Matrix.
-* [ ] Submeter o Merge Request final com a funcionalidade implementada.
+* [x] Desenvolver o script em Shell/Bash para capturar as últimas linhas de erro do *log* do CI.
+* [x] Configurar os gatilhos no arquivo `.gitlab-ci.yml` e o *payload* de envio para a API do Matrix.
+* [x] Submeter o Merge Request final com a funcionalidade implementada.
 
 ---
 
