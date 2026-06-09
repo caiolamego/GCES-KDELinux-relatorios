@@ -190,6 +190,42 @@ Nesta sprint, tive que pegar uma issue que não tinha a tag NewComer devido à f
 * `buildDeletionSlice` agora tem 3 parâmetros ao invés de 2. Ao adicionar o novo, passei `nil` para `toForceDelete` em ambos os call-sites existentes, garantindo que o comportamento "sem VACUUM_REMOVE_BUILD" é idêntico ao de antes. Essa foi a lição mais prática sobre manutenção de código legado.
 
 ### Plano Pessoal para a Próxima Sprint
-- [ ] Acompanhar o processo de *Code Review* e homologação efetuado pelos mantenedores;
-- [ ] Aplicar eventuais refatorações ou revisões de código sugeridas pela comunidade do KDE;
-- [ ] Buscar nova issue.
+- [x] Acompanhar o processo de *Code Review* e homologação efetuado pelos mantenedores;
+- [x] Aplicar eventuais refatorações ou revisões de código sugeridas pela comunidade do KDE;
+- [x] Buscar nova issue.
+
+## Sprint 3 – 25/05/2026 – 08/06/2026
+
+### Resumo da Sprint
+
+Esta sprint foi marcada pela execução prática e entrega de demandas críticas em múltiplas frentes. No escopo do KDE, submeti RFC's e resolvi conflitos dos meus 2 MR's anteriores.
+
+O foco principal foi resolver conflitos, submeter RFC's pedidos pela comunidade e submeter documentação para os meus Merge Request das 
+Issues #164 e #581.
+
+Paralelamente, dediquei forte esforço à elaboração do Trabalho Final de GCES.
+
+### Atividades Realizadas
+
+| Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| --- | --- | --- | --- | --- |
+| 01/06 | Apoio e discussão técnica no MR #528 do KDE | Discussão | [Comentário MR #528](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/528#note_1505139) | Concluído |
+| 04/06 | Início da configuração de infraestrutura do Trabalho Final de GCES (Pipeline CI/CD) | Código/Infra | [Instruções do Trabalho Final de GCES](https://gitlab.com/unb-esw/gces/gces2026-1/trabalho-final-gces-victorio-morais) | Concluído |
+
+### Maiores Avanços
+
+* **Gestão de Múltiplas Entregas:** Capacidade de orquestrar e entregar simultaneamente contribuições Open Source, projetos complexos de infraestrutura e demandas analíticas.
+
+### Maiores Dificuldades
+
+* **Ciclo de Revisão Assíncrono:** Interpretar tecnicamente os apontamentos e restrições de arquitetura deixados pelo mantenedor no MR #528, entendendo o alto rigor de aceitação de código do ecossistema KDE.
+* **Mudança Constante de Contexto:** Transitar rapidamente entre o desenvolvimento em Bash para automação de CI e o ambiente de orquestração e análise de qualidade.
+
+### Aprendizados
+
+* Vivência prática na dinâmica de *code review* de projetos Open Source de grande porte, compreendendo como absorver críticas estruturais de mantenedores seniores e preparar iterações de código.
+* Consolidação definitiva dos conceitos de integração contínua (CI) e inspeção contínua de código, fechando o ciclo de evolução do projeto de Gerência de Configuração.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
