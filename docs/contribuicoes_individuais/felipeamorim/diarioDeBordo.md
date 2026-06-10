@@ -201,11 +201,11 @@ Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos S
 
 | Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
 | ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
-| 01/05 | Escolha do thumbnailer `stl2thumbnail` de acordo com o feedback dos mantenedores na Issue | Discussão | [stl2thumbnail](https://github.com/krepa098/stl2thumbnail), [Comentário a issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1486260) | Concluído |
-| 01/05 | Criação de repositório para disponibilizar o pacote Flatpak e o manifesto usado | Documentação | [Repositório](https://github.com/lipeaaraujo/stl2thumbnail-flatpak) | Concluído |
-| 01/05 | Empacotamento em Flatpak do STL thumbnailer  | Código | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
-| 01/05 | Geração da release no repositório com o bundler do thumbnailer | Documentação | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
-| 01/05 | Mensagem na issue com os links do repositório e release para review dos mantenedores | Discussão | [Mensagem na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1503966) | Concluído |
+| 08/05 | Escolha do thumbnailer `stl2thumbnail` de acordo com o feedback dos mantenedores na Issue | Discussão | [stl2thumbnail](https://github.com/krepa098/stl2thumbnail), [Comentário a issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1486260) | Concluído |
+| 15/05 | Criação de repositório para disponibilizar o pacote Flatpak e o manifesto usado | Documentação | [Repositório](https://github.com/lipeaaraujo/stl2thumbnail-flatpak) | Concluído |
+| 15/05 | Empacotamento em Flatpak do STL thumbnailer  | Código | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 22/05 | Geração da release no repositório com o bundler do thumbnailer | Documentação | [Release com flatpak](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.1.0) | Concluído |
+| 22/05 | Mensagem na issue com os links do repositório e release para review dos mantenedores | Discussão | [Mensagem na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1503966) | Concluído |
 
 ### Maiores Avanços
 
@@ -226,3 +226,44 @@ Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos S
 * [ ] Aguardar o feedback dos mantenedores sobre a última mensagem na issue para dar continuidade à contribuição, realizando as alterações necessárias conforme o feedback recebido para garantir que a contribuição seja aceita e integrada ao projeto.
 * [ ] Começar outra contribuição para o projeto, escolhendo outra issue com a tag `Newcomer` ou outra tarefa adequada para iniciantes, e seguir o processo de contribuição do projeto para realizar a contribuição de forma eficiente e colaborativa com a comunidade do projeto.
 * [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
+
+## Sprint 3 - 23/05 - 05/06
+
+### Resumo da Sprint
+
+Nessa Sprint dei continuidade à contribuição do bundle thumbnailer na issue escolhida, realizando os ajustes necessários para garantir que o recurso esteja completamente integrado e funcionando corretamente no KDE Linux, e interagindo com os mantenedores e outros membros da comunidade para receber feedbacks e garantir que a contribuição esteja alinhada com as expectativas do projeto. Consegui realizar ajustes no manifesto do Flatpak para corrigir o nome do thumbnailer no post-install, e recebi feedbacks validando a correção e trazendo mais alguns ajustes necessários para a integração do bundle thumbnailer no KDE Linux, o que demonstra um avanço significativo na contribuição e na integração do recurso no projeto.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
+| ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
+| 27/05 | Resposta de contribuidor do projeto confirmando teste e funcionamento do bundle thumbnailer no KDE Linux | Discussão | [Comentário](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1506214) | Concluído |
+| 27/05 | Resposta de outro contribuidor trazendo alguns próximos passos e ajustes necessários para a integração do bundle thumbnailer no KDE Linux | Discussão | [Comentário](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1506243) | Concluído |
+| 30/05 | Ajuste do manifesto do Flatpak para renomear o nome do thumbnailer no post-install e atualização da release com o bundle corrigido | Código/Documentação | [Commit](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/commit/72839272a374dcafa535d50f078dadafcf219026), [Release](https://github.com/lipeaaraujo/stl2thumbnail-flatpak/releases/tag/v0.2.0) | Concluído |
+| 31/05 | Resposta do contribuidor validando a correção e trazendo alguns ajustes que também foram feitos por ele | Discussão | [Comentário](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1510120), [Commit](https://github.com/davidedmundson/flatpak/commit/7e98ea276186f51007e31549deaf9b8f5dba6497) | Concluído |
+| 01/06 | Comentário do mesmo contribuidor trazendo mais um ajuste necessário para a integração do bundle thumbnailer no KDE Linux | Discussão | [Comentário](https://invent.kde.org/kde-linux/kde-linux/-/work_items/219#note_1510540) | Concluído |
+
+### Maiores Avanços
+
+* Recebi feedbacks de contribuidor do projeto confirmando o teste e funcionamento do bundle thumbnailer no KDE Linux, o que é um avanço importante para a integração do recurso no projeto.
+* Consegui realizar ajustes no manifesto do Flatpak para corrigir o nome do thumbnailer no post-install, e recebi feedbacks validando a correção e trazendo mais alguns ajustes necessários para a integração do bundle thumbnailer no KDE Linux, o que demonstra um avanço significativo na contribuição e na integração do recurso no projeto.
+* A interação com os mantenedores e outros membros da comunidade para receber feedbacks e realizar ajustes necessários para a integração do bundle thumbnailer no KDE Linux foi um avanço importante para garantir que a contribuição esteja alinhada com as expectativas do projeto e para fortalecer minha participação na comunidade do projeto.
+
+### Maiores Dificuldades
+
+* Apesar de ter recebido feedbacks importantes para a integração do bundle thumbnailer no KDE Linux, ainda existem alguns ajustes necessários para garantir que o recurso esteja completamente integrado e funcionando corretamente no projeto, o que pode ser um desafio para garantir que a contribuição seja aceita e integrada ao projeto.
+* Falta de familiaridade com a tecnologia de empacotamento de aplicativos utilizando o Flatpak e com o processo de integração de recursos no KDE Linux, o que pode dificultar a realização dos ajustes necessários para a integração do bundle thumbnailer no projeto.
+* Acabei não conseguindo começar outra contribuição para o projeto por conta da falta de issues abertas com a tag `Newcomer` ou outras tarefas adequadas para iniciantes, o que dificultou a identificação de uma nova tarefa para contribuir e dar continuidade à minha participação no projeto.
+
+### Aprendizados
+
+* **Importância de receber feedbacks para a melhoria da contribuição**: Percebi que receber feedbacks de outros membros da comunidade é fundamental para melhorar a contribuição e garantir que ela esteja alinhada com as expectativas do projeto, o que pode aumentar as chances de aceitação e integração da contribuição no projeto.
+* **Importância de realizar ajustes necessários para a integração da contribuição no projeto**: Entendi que é fundamental realizar os ajustes necessários para garantir que a contribuição esteja completamente integrada e funcionando corretamente no projeto.
+* **Importância de se comunicar de forma clara e frequente com os mantenedores e outros membros da comunidade**: Percebi que manter uma comunicação clara e frequente com os mantenedores e outros membros da comunidade é fundamental para garantir que a contribuição esteja alinhada com as expectativas do projeto, para receber feedbacks importantes e para fortalecer minha participação na comunidade do projeto.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Dar continuidade à contribuição do bundle thumbnailer na issue escolhida, realizando os ajustes necessários para garantir que o recurso esteja completamente integrado e funcionando corretamente no KDE Linux, e interagindo com os mantenedores e outros membros da comunidade para receber feedbacks e garantir que a contribuição esteja alinhada com as expectativas do projeto.
+* [ ] Continuar procura por outras issues com a tag `Newcomer` ou outras tarefas adequadas para iniciantes no repositório do KDE Linux, para identificar uma nova tarefa para contribuir e dar continuidade à minha participação no projeto.
+* [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
+
