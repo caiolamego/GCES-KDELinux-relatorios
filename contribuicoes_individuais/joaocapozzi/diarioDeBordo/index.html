@@ -1,0 +1,1184 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../diegocarlito/diarioDeBordo/">
+      
+      
+        <link rel="next" href="../../felipeamorim/diarioDeBordo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>João Capozzi - GCES KDE Linux Relatórios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diario-de-bordo-joao-guilherme" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="GCES KDE Linux Relatórios" class="md-header__button md-logo" aria-label="GCES KDE Linux Relatórios" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCES KDE Linux Relatórios
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              João Capozzi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="GCES KDE Linux Relatórios" class="md-nav__button md-logo" aria-label="GCES KDE Linux Relatórios" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GCES KDE Linux Relatórios
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuições individuais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuições individuais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../caiolamego/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caio Lamego
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../victoriolazaro/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Victório Lázaro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../joaopedro/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    João Pedro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diegocarlito/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diego Carlito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    João Capozzi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    João Capozzi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-0-13042026-19042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 0 - 13/04/2026 - 19/04/2026
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 0 - 13/04/2026 - 19/04/2026">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumo-da-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo da Sprint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maiores-avancos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maiores Avanços
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maiores-dificuldades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maiores Dificuldades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprendizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo-feito-para-subir-o-kde-linux-no-qemu-via-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo feito para Subir o KDE Linux no QEMU via GUI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passo a Passo feito para Subir o KDE Linux no QEMU via GUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-instalacao-do-qemu-e-interface-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Instalação do QEMU e Interface Gráfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-download-da-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Download da imagem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criacao-da-maquina-virtual-e-configuracao-do-disco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Criação da Máquina Virtual e Configuração do Disco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuracao-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configuração de Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracao-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Configuração de Firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-evidencias-da-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Evidências da Execução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kde-linux-rodando-com-sucesso-apos-o-boot-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KDE Linux rodando com sucesso após o boot inicial.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KDE Linux rodando com sucesso após o boot inicial.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plano-pessoal-para-a-proxima-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plano Pessoal para a Próxima Sprint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../felipeamorim/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Felipe Amorim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renanlacerda/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Renan Lacerda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arthurgomes/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arthur Gomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-0-13042026-19042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 0 - 13/04/2026 - 19/04/2026
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 0 - 13/04/2026 - 19/04/2026">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumo-da-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo da Sprint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maiores-avancos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maiores Avanços
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maiores-dificuldades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maiores Dificuldades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprendizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo-feito-para-subir-o-kde-linux-no-qemu-via-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo feito para Subir o KDE Linux no QEMU via GUI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passo a Passo feito para Subir o KDE Linux no QEMU via GUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-instalacao-do-qemu-e-interface-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Instalação do QEMU e Interface Gráfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-download-da-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Download da imagem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criacao-da-maquina-virtual-e-configuracao-do-disco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Criação da Máquina Virtual e Configuração do Disco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuracao-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configuração de Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracao-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Configuração de Firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-evidencias-da-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Evidências da Execução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kde-linux-rodando-com-sucesso-apos-o-boot-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KDE Linux rodando com sucesso após o boot inicial.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KDE Linux rodando com sucesso após o boot inicial.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plano-pessoal-para-a-proxima-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plano Pessoal para a Próxima Sprint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="diario-de-bordo-joao-guilherme">Diário de Bordo – João Guilherme</h1>
+<h2 id="sprint-0-13042026-19042026">Sprint 0 - 13/04/2026 - 19/04/2026</h2>
+<h3 id="resumo-da-sprint">Resumo da Sprint</h3>
+<p>Nesta sprint, o foco principal foi preparar o ambiente para rodar o KDE Linux utilizando o QEMU através de uma interface gráfica (virt-manager). Como estou rodando o host no <strong>Manjaro</strong>, o processo foi focado em virtualização nativa no Linux, facilitando o setup e o registro.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Atividade</th>
+<th style="text-align: left;">Tipo (Código/Doc/Discussão/Outro)</th>
+<th style="text-align: left;">Link/Referência</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">20/04</td>
+<td style="text-align: left;">Instalação do QEMU e virt-manager</td>
+<td style="text-align: left;">Setup</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;">20/04</td>
+<td style="text-align: left;">Download da imagem do KDE Linux</td>
+<td style="text-align: left;">Setup</td>
+<td style="text-align: left;"><a href="https://kde.org/linux/docs/install-vm/">Link</a></td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;">20/04</td>
+<td style="text-align: left;">Criação da máquina virtual e configs (UEFI, hardware, disco)</td>
+<td style="text-align: left;">Setup</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;">21/04</td>
+<td style="text-align: left;">Criação do relatório de contribuição individual</td>
+<td style="text-align: left;">Doc</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maiores-avancos">Maiores Avanços</h3>
+<ul>
+<li>Configuração bem-sucedida do ambiente de desenvolvimento local usando QEMU via interface gráfica.</li>
+</ul>
+<h3 id="maiores-dificuldades">Maiores Dificuldades</h3>
+<ul>
+<li>Nenhuma dificuldade real. O único passo a mais foi precisar acessar a BIOS para habilitar a virtualização (VT-x) do meu processador i5-3570.</li>
+</ul>
+<h3 id="aprendizados">Aprendizados</h3>
+<ul>
+<li>Compreensão do uso de interfaces gráficas (virt-manager) para gerenciamento do QEMU.</li>
+<li>Entendimento da necessidade de firmware UEFI para boot de imagens Linux modernas.</li>
+<li>Montagem direta de imagens de disco bruto (<code>.raw</code>) como unidade de armazenamento principal da VM.</li>
+</ul>
+<h3 id="passo-a-passo-feito-para-subir-o-kde-linux-no-qemu-via-gui">Passo a Passo feito para Subir o KDE Linux no QEMU via GUI</h3>
+<h4 id="1-instalacao-do-qemu-e-interface-grafica">1. Instalação do QEMU e Interface Gráfica</h4>
+<p>Instalação dos pacotes necessários para virtualização no Manjaro:</p>
+<pre><code class="language-bash">sudo pacman -S qemu-desktop virt-manager libvirt edk2-ovmf dnsmasq iptables-nft
+sudo systemctl enable --now libvirtd
+</code></pre>
+<h4 id="2-download-da-imagem">2. Download da imagem</h4>
+<p>Download do arquivo <code>.raw</code> direto da documentação oficial do KDE:
+<a href="https://kde.org/linux/docs/install-vm/">https://kde.org/linux/docs/install-vm/</a></p>
+<h4 id="3-criacao-da-maquina-virtual-e-configuracao-do-disco">3. Criação da Máquina Virtual e Configuração do Disco</h4>
+<p>Importação da imagem <code>.raw</code> nativa no virt-manager através da opção "Import existing disk image", montando-a diretamente como o disco principal da VM. Durante a criação, marquei a opção "Personalizar configuração antes de instalar" e defini o sistema operacional base como Arch Linux.</p>
+<h4 id="4-configuracao-de-hardware">4. Configuração de Hardware</h4>
+<p>Configurações de hardware para rodar o ambiente sem gargalos:
+* <strong>Memória:</strong> 8192 MB
+* <strong>Processadores:</strong> 4 cores</p>
+<h4 id="5-configuracao-de-firmware">5. Configuração de Firmware</h4>
+<p>Alteração do firmware da máquina de BIOS Legacy para <strong>UEFI</strong> (provido pelo pacote edk2-ovmf). Passo obrigatório para que a imagem do KDE Linux consiga encontrar a partição EFI no disco <code>.raw</code> e iniciar corretamente.</p>
+<h2 id="6-evidencias-da-execucao">6. Evidências da Execução</h2>
+<p><img alt="Configuração UEFI no Virt-Manager" src="../assets/img_vm1.jpg" /></p>
+<p><em>Configuração do Firmware UEFI nas propriedades da VM.</em></p>
+<p><img alt="KDE Linux Executando" src="../assets/img_vm2.jpg" /></p>
+<h2 id="kde-linux-rodando-com-sucesso-apos-o-boot-inicial"><em>KDE Linux rodando com sucesso após o boot inicial.</em></h2>
+<h3 id="plano-pessoal-para-a-proxima-sprint">Plano Pessoal para a Próxima Sprint</h3>
+<ul>
+<li>[ ] Encontrar issue para contribuir no projeto</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
