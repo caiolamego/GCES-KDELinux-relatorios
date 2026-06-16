@@ -2,8 +2,6 @@
 
 ## Sprint 0 - 13/04/2026 - 19/04/2026
 
----
-
 ## Resumo da Sprint
 
 Nesta sprint, o foco principal foi preparar o ambiente para rodar o **KDE Linux** em uma máquina virtual no Windows.
@@ -115,8 +113,6 @@ Configurações → Sistema → Placa-mãe → Enable EFI
 
 ## Sprint 1 - 20/04/2026 - 04/05/2026
 
----
-
 ## Resumo da Sprint
 
 Neste sprint, meu foco foi entender o projeto KDE Linux e conseguir iniciar minha primeira contribuição. No início, tive dificuldade em encontrar uma issue adequada para iniciantes, especialmente com a tag *Newcomer*. Após explorar o repositório e analisar diferentes tarefas disponíveis, consegui identificar uma issue compatível com meu nível.
@@ -170,14 +166,14 @@ Após encontrar a issue, entrei em contato com a comunidade do projeto solicitan
 - [ ] Aguardar retorno da comunidade sobre a issue  
 - [ ] Iniciar a contribuição no projeto
 
-
-# Sprint 2 - 05/05/2026 a 18/05/2026
+## Sprint 2 - 05/05/2026 a 18/05/2026
 
 ## Resumo da Sprint
 
 Nesta sprint, o foco foi colocar a mão na massa após receber a autorização dos mantenedores do KDE. O objetivo era corrigir o bug no script `live-setup`, que se perdia e montava a partição errada quando havia mais de um pendrive conectado.
 
 Tive que resolver vários problemas de ambiente na minha máquina virtual (falta de espaço no disco, configuração do Docker em BTRFS e erros de internet) até conseguir rodar a compilação (*build*) completa do sistema. No fim, abri o *Merge Request* oficial com sucesso.
+
 
 ---
 
@@ -246,3 +242,65 @@ Deixei um comentário no MR avisando os mantenedores sobre esse problema externo
 - [ ] Aplicar eventuais refatorações ou revisões de código sugeridas pela comunidade do KDE;
 
 - [ ] Buscar nova issue.
+
+---
+
+## Sprint 3 - 25/05/2026 a 08/06/2026
+
+## Resumo da Sprint
+
+O grande destaque desta Sprint foi a **vitória final: o meu *Merge Request* foi oficialmente aceito e integrado (*merged*) ao projeto!** 🚀
+
+O foco inicial foi o processo de *Code Review*. Recebi o feedback oficial do mantenedor (Harald Sitter), que indicou que a solução técnica estava validada, mas solicitou ajustes na infraestrutura do meu repositório e deixou uma orientação importante sobre boas práticas de Git.
+
+A etapa consistiu em alterar as proteções da *branch* do meu *fork* no GitLab para permitir que o mantenedor fizesse um *rebase* do meu código com a versão mais recente do sistema. Após esse ajuste, o mantenedor pôde concluir o processo e **o meu código foi definitivamente mesclado com a versão oficial do KDE Linux**. Na reta final da sprint, iniciei a confecção do trabalho individual da disciplina, já que não encontrei novas issues abertas que estivessem adequadas para novas contribuições no momento.
+
+---
+
+## Atividades Realizadas
+
+| Data | Atividade | Tipo | Referência | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 25/05 | Recebimento e análise do *Code Review* | Discussão | KDE GitLab MR | ✅ Concluído |
+| 25/05 | Desbloqueio da *branch* `master` (*Unprotect*) no GitLab | Setup | Configurações do Repo | ✅ Concluído |
+| 25/05 | Resposta formal ao mantenedor concordando com o *rebase* | Discussão | KDE GitLab MR | ✅ Concluído |
+| 26/05 | **Aprovação e *Merge* definitivo no repositório oficial** | Código | KDE Invent | ✅ Concluído |
+| 07/06 | Início do trabalho individual e busca sem sucesso por novas issues | Doc / Análise | Repositório KDE | ✅ Concluído |
+
+---
+
+## Maiores Avanços
+
+### 1. MR aceito
+O maior marco de todo o projeto: meu código foi validado, aceito e integrado à *branch* principal do KDE Linux. A funcionalidade e a correção do bug que desenvolvi agora fazem parte de um sistema operacional utilizado globalmente.
+
+### 2. Ajuste de Infraestrutura no GitLab
+Foi necessário navegar nas configurações do GitLab (`Settings > Repository > Protected branches`) e remover a proteção padrão da *branch* `master` para dar permissão de escrita aos *maintainers* do repositório *upstream*, permitindo a eles finalizar a integração de forma limpa.
+
+---
+
+## Interação de Code Review e Aprovação
+
+Aqui está o registro do feedback do mantenedor, a minha resposta realizando o ajuste solicitado e a confirmação de que o código foi integrado (*Merged*):
+
+![Print do Code Review e Merge no GitLab](./assets/resposta_mr.jpeg)
+
+---
+
+## Maiores Dificuldades
+
+* Compreender as permissões e proteções automáticas de *branches* no GitLab, que inicialmente impediram o mantenedor de atualizar e mesclar o código diretamente.
+* Encontrar novas *issues* com escopo acessível/adequado para dar continuidade imediata às contribuições no repositório.
+
+---
+
+## Aprendizados
+
+* **Boas Práticas de Versionamento (Named Branches):** O mantenedor pontuou o erro mais clássico em *open source*: trabalhar e submeter código diretamente na *branch* `master`. Aprendi que o padrão da indústria é sempre criar uma *branch* com um nome descritivo (ex: `git checkout -b fix-live-setup`) para isolar as alterações e facilitar o *rebase* no futuro.
+* O funcionamento prático do processo de *Rebase* e *Merge* para manter o histórico de *commits* limpo e linear em projetos de grande escala.
+
+---
+
+## Plano Pessoal para a Próxima Sprint
+
+- [ ] Procurar ativamente por novas *issues* abertas para continuar contribuindo no ecossistema KDE;
