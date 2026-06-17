@@ -1,0 +1,13 @@
+/* KDE Breeze light blue */
+:root {
+  --md-primary-fg-color:        #3daee9;
+  --md-primary-fg-color--light: #5cbef0;
+  --md-primary-fg-color--dark:  #1d99f3;
+  --md-accent-fg-color:         #1d99f3;
+}
+
+/* Keep header text/icons readable on the light blue background */
+.md-header,
+.md-tabs {
+  color: #ffffff;
+}
