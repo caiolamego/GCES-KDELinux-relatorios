@@ -19,8 +19,10 @@
 | **Diego Carlito** | Escreveu e submeteu o **MR #542** (Issue #579) com a automação de captura de logs e disparo via webhook nas *nightly builds*; passou por duas rodadas de *code review* com os mantenedores. Apoiou tecnicamente a Issue #21 do Caio. |
 | **Felipe Amorim** | Deu continuidade à Issue #219; ajustou o manifesto do Flatpak (correção do nome do thumbnailer no post-install), publicou a *release* `v0.2.0` e recebeu confirmação de testes e validação dos contribuidores do projeto, com novos ajustes mapeados. |
 | **Victório Lázaro** | Resolveu conflitos e submeteu RFCs e documentação solicitadas pelos mantenedores nos seus dois MRs anteriores (Issues #164 e #581 / **MR #528**), absorvendo o ciclo de revisão assíncrono da comunidade. |
+| **João Pedro** | Concluiu o *code review* da **Issue #82** com o mantenedor Harald Sitter (correção do script `live-setup`); ajustou as proteções da *branch* do fork para viabilizar o *rebase* e teve o **Merge Request oficialmente aceito e integrado (*merged*)** ao repositório do KDE Linux. |
 
 ## 3. Maiores Avanços
+* **Código Integrado ao KDE Linux:** O Merge Request da Issue #82 (correção do `live-setup`) foi oficialmente aprovado e mesclado à branch principal do projeto — a primeira contribuição da equipe efetivamente integrada ao sistema operacional.
 * **Entregas de Código *Upstream*:** Múltiplos Merge Requests de CI/CD submetidos ao KDE (MR #542 e MR !101), traduzindo o planejamento arquitetural da Sprint 2 em código real.
 * **Colaboração entre Repositórios:** Caio e Diego desenvolveram de forma coordenada a mesma solução nos repositórios `kde-linux` e `kde-linux-packages`, mantendo padronização e reaproveitando arquitetura já revisada.
 * **Tratamento Seguro de Segredos:** A URL do webhook do Matrix não foi versionada no código, sendo fornecida por variável protegida do GitLab CI/CD (`MATRIX_WEBHOOK_URL`).
@@ -37,6 +39,7 @@
 * **Reuso de Arquitetura Revisada:** Reaproveitar uma solução já validada pelos mantenedores reduz divergências e facilita o trabalho de revisão entre repositórios.
 * **Importância do Feedback:** Receber e aplicar feedbacks da comunidade é fundamental para alinhar a contribuição às expectativas e aumentar suas chances de integração.
 * **Mascaramento de Erros em Pipelines:** Pipes de comandos podem esconder códigos de erro; é essencial preservar a falha para que o CI a reporte corretamente.
+* **Named Branches e Rebase:** Submeter código em *branches* descritivas (em vez da `master`) e compreender o fluxo de *rebase/merge* mantém o histórico limpo e facilita a integração pelos mantenedores.
 
 ## 6. Planejamento para a Próxima Sprint
 * [ ] Acompanhar as pipelines e os processos de revisão dos Merge Requests (!101, #542, #528).
