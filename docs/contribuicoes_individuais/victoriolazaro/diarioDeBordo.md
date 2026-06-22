@@ -228,4 +228,47 @@ Paralelamente, dediquei forte esforço à elaboração do Trabalho Final de GCES
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
+~~* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.~~
+
+## Sprint 4 – 09/06/2026 – 22/06/2026
+
+### Resumo da Sprint
+
+Esta sprint marcou uma mudança de direcionamento nas atividades de contribuição Open Source. Após acompanhar por algumas semanas o fluxo de desenvolvimento do projeto KDE Linux, optei por interromper minhas tentativas de contribuição para o repositório. Entre os fatores que motivaram essa decisão estão a baixa quantidade de issues disponíveis, o fato de que grande parte das tarefas abertas já possuía responsáveis designados, a elevada complexidade técnica das poucas issues restantes e o longo tempo de espera para obtenção de feedback sobre Merge Requests submetidos anteriormente.
+
+Diante desse cenário, passei a dedicar meus esforços ao projeto alternativo disponibilizado pela disciplina para os alunos que encontrassem dificuldades em realizar contribuições efetivas no KDE Linux. Assim, iniciei o desenvolvimento do Projeto Individual 4, cujo objetivo é construir um pipeline de Análise de Dados Não Estruturados (UDA) voltado para a coleta, processamento e disponibilização de informações extraídas de relatórios corporativos do setor habitacional.
+
+Durante a sprint, o foco principal esteve na implementação da camada de coleta automatizada de dados, responsável por localizar e obter relatórios operacionais publicados pelas construtoras em seus portais de Relações com Investidores (RI). Ao final do período, a etapa de scraping e descoberta automática dos links dos documentos já se encontrava funcional, restando a implementação das camadas de extração semântica dos dados, definição do Contrato Semântico e disponibilização dos resultados por meio de uma API.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                                                                                                | Tipo (Código/Doc/Discussão/Outro) | Link/Referência              | Status    |
+| ----- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------- | ---------------------------- | --------- |
+| 18/06 | Implementação dos mecanismos de scraping para identificação automática dos relatórios trimestrais e coleta automatizada dos links PDFs                                 | Código/Planejamento               | [Fork Projeto Individual 4](https://github.com/Victor-oss/Projetos-Individuais-2026-1/tree/projeto4-victorio-lazaro/victorio-lazaro/projeto-individual-4)         | Concluído |
+
+### Maiores Avanços
+
+* **Redefinição Estratégica do Projeto:** Identificação precoce dos obstáculos existentes no processo de contribuição ao KDE Linux e realocação dos esforços para uma atividade com maior potencial de entrega dentro do prazo da disciplina.
+* **Automação da Coleta de Dados:** Desenvolvimento de mecanismos capazes de localizar automaticamente relatórios operacionais publicados por diferentes construtoras, estabelecendo a base da camada de ingestão do pipeline.
+* **Conhecimento sobre Fontes de Dados Corporativos:** Compreensão da estrutura e organização dos portais de Relações com Investidores, identificando padrões e diferenças entre as empresas analisadas.
+
+### Maiores Dificuldades
+
+* **Baixa Disponibilidade de Demandas no KDE Linux:** A pequena quantidade de issues disponíveis, aliada à existência de responsáveis previamente designados para a maioria delas, reduziu significativamente as oportunidades de contribuição efetiva.
+* **Ausência de Feedback nos Merge Requests:** O longo período sem retorno ou revisão das contribuições submetidas dificultou a continuidade do trabalho e a evolução das entregas dentro do projeto Open Source.
+* **Heterogeneidade das Fontes de Dados:** Apesar de possuírem objetivos semelhantes, as Centrais de Resultados das construtoras apresentam estruturas distintas, exigindo abordagens específicas para a descoberta automatizada dos relatórios.
+
+### Aprendizados
+
+* Compreensão prática dos desafios relacionados à participação em projetos Open Source de grande porte, especialmente quando o fluxo de revisão depende da disponibilidade dos mantenedores.
+* Aprendizado sobre técnicas de web scraping aplicadas à coleta automatizada de documentos corporativos distribuídos em diferentes portais web.
+* Consolidação dos conceitos de pipelines orientados a eventos, ingestão contínua de dados e automação de processos de coleta.
+* Maior entendimento sobre os desafios de transformar dados não estruturados em informações estruturadas consumíveis por aplicações e APIs.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Implementar a camada de extração semântica dos relatórios utilizando LLMs.
+* [ ] Definir e validar o Contrato Semântico dos Dados para garantir consistência e evitar alucinações na extração.
+* [ ] Implementar o mecanismo de idempotência para evitar reprocessamento de documentos.
+* [ ] Desenvolver a API REST para consulta dos dados extraídos por empresa e período.
+* [ ] Integrar todas as camadas do pipeline e realizar testes.
