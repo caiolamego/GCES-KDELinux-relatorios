@@ -304,3 +304,57 @@ Aqui está o registro do feedback do mantenedor, a minha resposta realizando o a
 ## Plano Pessoal para a Próxima Sprint
 
 - [ ] Procurar ativamente por novas *issues* abertas para continuar contribuindo no ecossistema KDE;
+
+---
+
+# Sprint 4 - 09/06/2026 a 22/06/2026
+
+## Resumo da Sprint
+Nesta sprint, o foco foi aplicar um nível maior de senioridade técnica, saindo de scripts de conveniência para intervenções diretas na arquitetura de *build* do KDE Linux. O objetivo foi resolver a instabilidade na geração da imagem **UKI** (*Unified Kernel Image*), causada por dependências de módulos do kernel (como `kafs` e `rxrpc`) que entravam em conflito com as diretrizes de segurança do projeto.
+
+---
+
+## Atividades Realizadas
+
+| Data | Atividade | Tipo | Referência | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 09/06 | Pesquisa e seleção da Issue #636 (Build UKI/Kernel) | Discussão | KDE GitLab #636 | ✅ Concluído |
+| 10/06 | Análise da lógica de build do *mkosi* e ordens de execução | Análise | Repositório KDE | ✅ Concluído |
+| 12/06 | Implementação da limpeza de módulos via `find -delete` | Código | `mkosi.postinst.chroot` | ✅ Concluído |
+| 14/06 | Refatoração: remoção da abordagem `rm -rf` obsoleta | Código | `40-core.sh.chroot` | ✅ Concluído |
+| 16/06 | Testes de build local e validação de dependências | Setup | Máquina Virtual | ✅ Concluído |
+| 17/06 | Submissão do Merge Request com descrição técnica | Doc / Código | KDE Invent | ✅ Concluído |
+
+---
+
+## Detalhamento Técnico
+
+### 1. O Problema: Conflitos no UKI
+O sistema tentava gerar uma imagem de boot (UKI) que incluía o módulo `kafs`. Ocorre que o `kafs` possui uma dependência obrigatória no `rxrpc`. Como o projeto KDE Linux bloqueia o `rxrpc` por segurança (vulnerabilidade *dirtyfrag*), o *build* quebrava ao tentar montar a imagem.
+
+### 2. A Solução Implementada
+Reestruturei o *pipeline* para garantir que a remoção fosse feita antes da geração do bootloader:
+* **Remoção Preditiva:** Utilizei o comando `find` com a flag `-delete` dentro do `mkosi.postinst.chroot`. 
+* **Sincronia:** Posicionei essa limpeza **antes** da execução do script `rebuild-efi`. Isso garante que o gerador de boot (UKIFY) trabalhe sobre um diretório de módulos já "higienizado".
+
+```bash
+# Limpeza de módulos vulneráveis/não utilizados
+find /usr/lib/modules/"$kernel_version" -type f \( \
+    -name "af_alg.ko.zst" -o \
+    -name "algif_*.ko.zst" -o \
+    -name "esp4.ko.zst" -o \
+    -name "esp6.ko.zst" -o \
+    -name "rxrpc.ko.zst" -o \
+    -path "*/net/rxrpc/*" -o \
+    -path "*/fs/afs/*" \
+    \) -delete
+
+```
+
+## Submissão e Merge Request
+
+A solução foi submetida via *Merge Request* após a refatoração do script de pós-instalação. O objetivo foi mover a lógica de segurança para antes da fase de geração do *bootloader*, garantindo a integridade do UKI.
+
+> **Status do MR:** https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/565
+
+![Print da interface do Merge Request no GitLab](./assets/mr_uki_generation.jpeg)
