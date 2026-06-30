@@ -267,8 +267,38 @@ Durante a sprint, o foco principal esteve na implementação da camada de coleta
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Implementar a camada de extração semântica dos relatórios utilizando LLMs.
-* [ ] Definir e validar o Contrato Semântico dos Dados para garantir consistência e evitar alucinações na extração.
-* [ ] Implementar o mecanismo de idempotência para evitar reprocessamento de documentos.
-* [ ] Desenvolver a API REST para consulta dos dados extraídos por empresa e período.
-* [ ] Integrar todas as camadas do pipeline e realizar testes.
+* [x] Implementar a camada de extração semântica dos relatórios utilizando LLMs.
+* [x] Definir e validar o Contrato Semântico dos Dados para garantir consistência e evitar alucinações na extração.
+* [x] Implementar o mecanismo de idempotência para evitar reprocessamento de documentos.
+* [x] Desenvolver a API REST para consulta dos dados extraídos por empresa e período.
+* [x] Integrar todas as camadas do pipeline e realizar testes.
+
+## Sprint 5 – 22/06/2026 - 31/06/2026
+
+### Resumo da Sprint
+
+Nesta sprint, eu finalizei o projeto individual 4 que tinha começado na sprint anterior e implementei as camadas de extração semântica dos dados, definição do Contrato Semântico e disponibilização dos resultados por meio de uma API do projeto.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                                                                                                | Tipo (Código/Doc/Discussão/Outro) | Link/Referência              | Status    |
+| ----- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------- | ---------------------------- | --------- |
+| 30/06 | Finalização do projeto individual 4 e submissão do PR                                | Código/Planejamento               | [PR do Projeto Individual 4](https://github.com/unb-Sistemas-de-Machine-learning/Projetos-Individuais-2026-1/pull/86)         | Concluído |
+
+### Maiores Avanços
+
+* **Implementação Completa do Pipeline Inteligente:** Construção de uma solução ponta a ponta capaz de detectar novos relatórios operacionais, processá-los automaticamente e persistir indicadores estruturados em banco de dados sem intervenção manual.
+* **Extração Semântica com LLMs:** Desenvolvimento de uma camada de análise baseada em IA capaz de interpretar documentos não estruturados e extrair métricas de negócio relevantes sem depender de regras rígidas de layout ou coordenadas fixas dos PDFs.
+* **Disponibilização dos Dados por API:** Criação de uma API REST que permite consultar indicadores operacionais por empresa, período e tipo de métrica, transformando documentos corporativos em informações facilmente consumíveis por outras aplicações.
+
+### Maiores Dificuldades
+
+* **Garantia de Confiabilidade na Extração por IA:** Definir estratégias para reduzir alucinações e inconsistências dos modelos de linguagem, exigindo a criação de contratos semânticos e mecanismos de validação dos dados extraídos.
+* **Interpretação de Documentos com Estruturas Variáveis:** Os relatórios apresentavam diferenças significativas de organização, nomenclatura e forma de apresentação dos indicadores, tornando desafiadora a construção de um processo de extração genérico.
+* **Balanceamento entre Precisão e Custo Computacional:** Foi necessário encontrar uma estratégia eficiente de segmentação e processamento dos documentos para reduzir o consumo de tokens e o tempo de execução sem comprometer a qualidade dos resultados.
+
+### Aprendizados
+
+* **Aplicação Prática de LLMs em Engenharia de Dados:** Compreensão de como modelos de linguagem podem ser utilizados para transformar dados não estruturados em informações estruturadas, indo além de casos tradicionais de chatbot ou geração de texto.
+* **Importância de Contratos Semânticos e Validação:** Aprendizado sobre a necessidade de validar rigorosamente as respostas produzidas por IA para garantir consistência, rastreabilidade e confiabilidade dos dados armazenados.
+* **Arquitetura de Pipelines Orientados a Eventos:** Consolidação dos conceitos de ingestão contínua, idempotência, processamento automatizado de documentos e disponibilização de dados por meio de APIs em um cenário real de integração de sistemas.
