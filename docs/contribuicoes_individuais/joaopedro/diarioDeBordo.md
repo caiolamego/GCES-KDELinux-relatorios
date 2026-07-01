@@ -361,7 +361,6 @@ find /usr/lib/modules/"$kernel_version" -type f \( \
 A solução foi submetida via *Merge Request* após a refatoração do script de pós-instalação. O objetivo foi mover a lógica de segurança para antes da fase de geração do *bootloader*, garantindo a integridade do UKI.
 
 > **Status do MR:** https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/565
-> **Data de Submissão:** 17/06/2026
 
 ![Print da interface do Merge Request no GitLab](./assets/mr_uki_generation.jpeg)
 
