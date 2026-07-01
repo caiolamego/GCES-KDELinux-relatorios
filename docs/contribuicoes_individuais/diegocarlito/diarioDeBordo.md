@@ -167,4 +167,42 @@ Paralelamente, dediquei forte esforço à finalização da infraestrutura do Tra
 
 ### Plano Pessoal para a Próxima Sprint
 
-* [ ] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
+* [x] Monitorar o processo de *Code Review* e aplicar eventuais revisões solicitadas pelos mantenedores.
+
+---
+
+## Sprint 4 – 08/06/2026 – 01/07/2026
+
+### Resumo da Sprint
+
+Esta sprint foi caracterizada pelo aprofundamento em integrações a nível de sistema operacional (OS). Inicialmente, dediquei esforços para o acompanhamento e aplicação das correções sugeridas no *code review* do [MR #542](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/542#note_1526031).
+
+O foco central desta iteração, no entanto, foi o desenvolvimento de uma nova funcionalidade crítica de segurança focada em hardware: a [Issue #335](https://invent.kde.org/kde-linux/kde-linux/-/work_items/335). O objetivo era criar um mecanismo que impedisse o sistema de iniciar tarefas pesadas (como o processo de migração do sistema) caso a máquina estivesse rodando exclusivamente na bateria. Para solucionar isso, desenvolvi um script em Python focado na leitura da classe `power_supply` do Linux.
+
+O script foi injetado diretamente na árvore do sistema operacional (*rootfs*) através da estrutura `mkosi.extra/`. A funcionalidade atua como um validador prévio: se o carregador estiver desconectado, o processo de migração é bloqueado, mitigando severamente os riscos de corrupção de dados por desligamento súbito. Para garantir a eficácia do código, realizei compilações locais gerando imagens customizadas do OS e validei o comportamento dinamicamente (simulando a presença e ausência de tomada) através de uma máquina virtual em modo UEFI no Virt-Manager.
+
+### Atividades Realizadas
+
+| Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
+| --- | --- | --- | --- | --- |
+| 10/06 | *Feedbacks* para refinamento de código (*Code Review*) no MR de notificações Matrix | Revisão/Código | [MR #542](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/542#note_1526031) | Concluído |
+| 14/06 | Estudo de viabilidade técnica e arquitetura para a Issue #335 (Validação de AC Power) | Doc/Discussão | [Issue #335](https://invent.kde.org/kde-linux/kde-linux/-/work_items/335), [Comentário da Issue #335](https://invent.kde.org/kde-linux/kde-linux/-/work_items/335#note_1535224) | Concluído |
+| 30/06 | Desenvolvimento do script Python para leitura de *status* da bateria via OS | Código | [Branch 335-ac-power-check](https://invent.kde.org/diegocarlito/kde-linux/-/tree/335-ac-power-check?ref_type=heads) | Concluído |
+| 30/06 | Integração do validador de energia ao processo de migração usando `mkosi.extra` | Código/Infra | [Commit](https://invent.kde.org/diegocarlito/kde-linux/-/commit/99d008ef8e13e6eac3f7dffcf39c2d22bc0dc342) | Concluído |
+| 01/07 | Abertura do Merge Request com a funcionalidade de proteção de bateria | Código | [MR da Issue #335](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/569) | Concluído |
+
+### Maiores Avanços
+
+* **Desenvolvimento a Nível de SO:** Capacidade de escrever código que interage diretamente com o hardware virtual/físico (leitura de *power supply*), saindo da camada de automação web e indo para a base do sistema operacional.
+* **Maturidade no Fluxo de Contribuição:** Tratamento eficiente do ciclo de *code review* da Sprint 3, aplicando as considerações dos mantenedores e garantindo que o PR caminhe para o *merge* final sem atritos.
+* **Validação em Ambiente Isolado:** Geração e execução bem-sucedida de uma imagem *custom* completa do KDE Linux com o `mkosi` para provar o conceito de forma tátil em uma VM.
+
+### Maiores Dificuldades
+
+* **Lógica de Fallback de Hardware:** Garantir que o script de validação de bateria seja robusto o suficiente para não falhar ou bloquear o sistema indevidamente em ambientes que nativamente não possuem bateria (como *desktops* tradicionais ou certas configurações de *hypervisors*).
+* **Injeção Correta de Dependências:** Compreender a hierarquia do `mkosi` para garantir que o script Python fosse parar no caminho correto dentro do *rootfs* do sistema operacional final para ser executado como esperado.
+
+### Aprendizados
+
+* Compreensão aprofundada de como o Kernel Linux expõe dados de hardware através de diretórios virtuais (como o comportamento do ACPI) e como acessá-los programaticamente via Python.
+* Entendimento prático de como sistemas operacionais modernos imutáveis (ou baseados em imagens geradas) lidam com scripts customizados através da técnica de sobreposição de arquivos durante o *build*.
