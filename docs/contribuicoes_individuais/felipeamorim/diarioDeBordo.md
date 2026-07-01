@@ -227,6 +227,8 @@ Nesse Sprint, meu foco foi realizar o empacotamento do thumbnailer de arquivos S
 * [ ] Começar outra contribuição para o projeto, escolhendo outra issue com a tag `Newcomer` ou outra tarefa adequada para iniciantes, e seguir o processo de contribuição do projeto para realizar a contribuição de forma eficiente e colaborativa com a comunidade do projeto.
 * [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
 
+---
+
 ## Sprint 3 - 23/05 - 05/06
 
 ### Resumo da Sprint
@@ -266,4 +268,48 @@ Nessa Sprint dei continuidade à contribuição do bundle thumbnailer na issue e
 * [ ] Dar continuidade à contribuição do bundle thumbnailer na issue escolhida, realizando os ajustes necessários para garantir que o recurso esteja completamente integrado e funcionando corretamente no KDE Linux, e interagindo com os mantenedores e outros membros da comunidade para receber feedbacks e garantir que a contribuição esteja alinhada com as expectativas do projeto.
 * [ ] Continuar procura por outras issues com a tag `Newcomer` ou outras tarefas adequadas para iniciantes no repositório do KDE Linux, para identificar uma nova tarefa para contribuir e dar continuidade à minha participação no projeto.
 * [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto e contribuir de forma mais efetiva para o desenvolvimento do KDE Linux.
+
+---
+
+## Sprint 4 - 06/06 - 20/06
+
+### Resumo da Sprint
+
+Nessa sprint consegui contribuir em uma nova issue, que consiste em adicionar uma ferramenta que coleta informações e logs essenciais de um sistema KDE Linux automaticamente para auxiliar na abertura de issues e bugs. A issue foi escolhida por mim e aprovada pelo mantenedor do projeto, e a primeira implementação da solução foi realizada e submetida para revisão através de um merge request.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
+| ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
+| 06/06 | Mensagem no Matrix com dúvida em relação ao namespace do repositório do pacote (inicialmente criado no meu GitHub principal) | [Mensagem](./assets/question-stl-thumbnailer-namespace.png) | Esperando resposta |
+| 16/06 | Escolha de nova issue sem a tag `Newcomer` para contribuição (Some kind of "kde-linux-bug-report" tool that collects info automatically) | Discussão | [Issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547) | Concluído |
+| 16/06 | Comentário de interesse para entender o escopo da nova issue escolhida | Discussão | [Comentário na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547#note_1524234) | Concluído |
+| 17/06 | Resposta do mantenedor (Nate) explicando o escopo da nova issue escolhida e dando instruções para começar a contribuição | Discussão | [Comentário na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547#note_1525793) | Concluído |
+| 20/06 | Abertura do merge request (Add a bug report tool that collects essential info automatically) com a primeira implementação da nova issue escolhida | Código/Discussão | [Merge Request](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558) | Concluído |
+
+### Detalhes da Sprint
+
+### Maiores Avanços
+
+* Escolha de uma nova issue para contribuição, que consiste em adicionar uma ferramenta que coleta informações e logs essenciais de um sistema KDE Linux automaticamente para auxiliar na abertura de issues e bugs. Essa era uma issue não `Newcomer`, mas que foi escolhida por mim e aprovada pelo mantenedor do projeto.
+* Entendimento do escopo da nova issue escolhida e das instruções fornecidas pelo mantenedor do projeto para começar a contribuição.
+* Abertura do merge request com a primeira implementação da nova issue escolhida, submetendo a contribuição para revisão pelos mantenedores do projeto.
+
+### Maiores Dificuldades
+
+* Não consegui receber resposta no Matrix em relação à dúvida sobre o namespace do repositório do pacote. O que me deixou travado na contribuição da issue sobre empacotamento do STL thumbnailer.
+* Entender o escopo da nova issue escolhida e as instruções fornecidas pelo mantenedor do projeto para começar a contribuição, o que exigiu uma comunicação clara com o mantenedor para garantir que a contribuição estivesse alinhada com as expectativas do projeto.
+
+### Aprendizados
+
+* **Definição de escopo de uma issue**: Aprendi a importância de entender claramente o escopo de uma issue antes de começar a trabalhar nela, para garantir que a contribuição esteja alinhada com as expectativas do projeto e para evitar retrabalho.
+* **Formato de commits e abertura de merge requests no KDE Linux**: Aprendi sobre o formato de commits e a abertura de merge requests no KDE Linux, seguindo as diretrizes do projeto para garantir que a contribuição seja aceita e integrada ao projeto. (Na última contribuição, os commits foram feitos em um repositório a parte do ambiente por se tratar de um empacotamento).
+* **Primeira issue sem a tag `Newcomer`:** Aprendi que é possível contribuir com o projeto mesmo em issues que não possuem a tag `Newcomer`, desde que haja uma comunicação clara com os mantenedores do projeto para garantir que a contribuição esteja alinhada com as expectativas do projeto.
+
+### Plano Pessoal para a Próxima Sprint
+
+* [ ] Finalizar a implementação da nova issue escolhida, realizando os ajustes necessários conforme o feedback recebido no merge request para garantir que a contribuição seja aceita e integrada ao projeto.
+* [ ] Continuar acompanhando as discussões e interações na comunidade do projeto, participando ativamente das discussões, tirando dúvidas e colaborando com outros membros da comunidade para fortalecer minha participação no projeto.
+
+---
 
