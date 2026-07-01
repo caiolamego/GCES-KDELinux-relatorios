@@ -285,6 +285,8 @@ Aqui está o registro do feedback do mantenedor, a minha resposta realizando o a
 
 ![Print do Code Review e Merge no GitLab](./assets/resposta_mr.jpeg)
 
+> **Link do MR:** https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/527
+
 ---
 
 ## Maiores Dificuldades
@@ -310,24 +312,28 @@ Aqui está o registro do feedback do mantenedor, a minha resposta realizando o a
 # Sprint 4 - 09/06/2026 a 22/06/2026
 
 ## Resumo da Sprint
-Nesta sprint, o foco foi aplicar um nível maior de senioridade técnica, saindo de scripts de conveniência para intervenções diretas na arquitetura de *build* do KDE Linux. O objetivo foi resolver a instabilidade na geração da imagem **UKI** (*Unified Kernel Image*), causada por dependências de módulos do kernel (como `kafs` e `rxrpc`) que entravam em conflito com as diretrizes de segurança do projeto.
+Nesta sprint, o foco foi aplicar um nível maior de senioridade técnica, expandindo o escopo de contribuições no ecossistema KDE. As atividades saíram de *scripts* de conveniência para intervenções diretas na arquitetura. A primeira frente resolveu a instabilidade na geração da imagem **UKI** (*Unified Kernel Image*) do KDE Linux, mitigando conflitos de dependências de módulos do kernel. A segunda frente focou na refatoração de código **C++** e limpeza do sistema de *build* (**CMake**) da aplicação KDE Ark, eliminando dívidas técnicas e poluição de arquivos de configuração do sistema.
 
 ---
 
 ## Atividades Realizadas
 
-| Data | Atividade | Tipo | Referência | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| 09/06 | Pesquisa e seleção da Issue #636 (Build UKI/Kernel) | Discussão | KDE GitLab #636 | ✅ Concluído |
-| 10/06 | Análise da lógica de build do *mkosi* e ordens de execução | Análise | Repositório KDE | ✅ Concluído |
-| 12/06 | Implementação da limpeza de módulos via `find -delete` | Código | `mkosi.postinst.chroot` | ✅ Concluído |
-| 14/06 | Refatoração: remoção da abordagem `rm -rf` obsoleta | Código | `40-core.sh.chroot` | ✅ Concluído |
-| 16/06 | Testes de build local e validação de dependências | Setup | Máquina Virtual | ✅ Concluído |
-| 17/06 | Submissão do Merge Request com descrição técnica | Doc / Código | KDE Invent | ✅ Concluído |
-
+| Data | Atividade | Referência |
+| :--- | :--- | :--- |
+| 09/06 | Pesquisa e seleção da Issue #636 (Build UKI/Kernel) | GitLab #636 |
+| 10/06 | Análise da lógica de build do *mkosi* e ordens de execução | Repositório KDE |
+| 12/06 | Implementação da limpeza de módulos via `find -delete` | `mkosi.postinst.chroot` |
+| 14/06 | Refatoração: remoção da abordagem `rm -rf` obsoleta | `40-core.sh.chroot` |
+| 16/06 | Testes de build local e validação de dependências | Máquina Virtual |
+| 29/06 | Submissão do Merge Request com descrição técnica | KDE Invent |
+| 18/06 | Pesquisa e seleção da Issue de arquitetura (Poluição em `/etc`) | Repositório KDE |
+| 19/06 | Clonagem e análise do código-fonte C++ e framework Qt | Repositório Ark |
+| 20/06 | Refatoração da interface e testes de compilação | `mainwindow.cpp` |
+| 21/06 | Limpeza do Build System e exclusão do artefato obsoleto (`arkrc`) | `CMakeLists.txt` |
+| 30/06 | Submissão do Merge Request de refatoração do KDE Ark | KDE Invent |
 ---
 
-## Detalhamento Técnico
+## Detalhamento Técnico: KDE Linux (Geração de UKI)
 
 ### 1. O Problema: Conflitos no UKI
 O sistema tentava gerar uma imagem de boot (UKI) que incluía o módulo `kafs`. Ocorre que o `kafs` possui uma dependência obrigatória no `rxrpc`. Como o projeto KDE Linux bloqueia o `rxrpc` por segurança (vulnerabilidade *dirtyfrag*), o *build* quebrava ao tentar montar a imagem.
@@ -348,13 +354,57 @@ find /usr/lib/modules/"$kernel_version" -type f \( \
     -path "*/net/rxrpc/*" -o \
     -path "*/fs/afs/*" \
     \) -delete
-
 ```
 
-## Submissão e Merge Request
+## Submissão e Merge Request (KDE Linux)
 
 A solução foi submetida via *Merge Request* após a refatoração do script de pós-instalação. O objetivo foi mover a lógica de segurança para antes da fase de geração do *bootloader*, garantindo a integridade do UKI.
 
 > **Status do MR:** https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/565
+> **Data de Submissão:** 17/06/2026
 
 ![Print da interface do Merge Request no GitLab](./assets/mr_uki_generation.jpeg)
+
+---
+
+## Detalhamento Técnico: KDE Ark (Refatoração C++ e CMake)
+
+### 1. O Problema: Poluição do diretório `/etc`
+A equipe core do KDE levantou uma *issue* arquitetural: distribuições Linux modernas (especialmente as imutáveis) devem manter o diretório `/etc` o mais limpo possível, reservando-o estritamente para configurações manuais de administradores. No entanto, o descompactador oficial do sistema (Ark) instalava um arquivo de configuração (`arkrc`) no `/etc` com o único propósito de forçar a barra de menus a iniciar oculta no primeiro acesso do usuário.
+
+### 2. A Solução Implementada
+A dívida técnica foi eliminada transferindo a responsabilidade da configuração do sistema de arquivos para a lógica interna da própria aplicação. O fluxo de refatoração consistiu em três frentes:
+
+* **Lógica de Interface C++ (`mainwindow.cpp`):**
+  Foi injetada a chamada para ocultar a barra de menus imediatamente antes da inicialização da GUI (`setupGUI(...)`). Isso define o estado de fábrica como "oculto". Como a alteração ocorre antes da leitura das configurações locais, se o usuário já possuir uma preferência salva em seu ambiente (ex: menu visível em `~/.config/arkrc`), a função `setupGUI` a respeita e sobrescreve o comando inicial de forma transparente.
+
+```cpp
+    setXMLFile(QStringLiteral("arkui.rc"));
+    
+    // Esconde a barra de menus por padrão no primeiro acesso (remove a necessidade do /etc/arkrc)
+    menuBar()->hide();
+    
+    setupGUI(ToolBar | Keys | Save);
+```
+
+* **Remoção de Artefato Obsoleto:**
+  O arquivo físico `app/arkrc`, que se tornou inútil após a refatoração do código, foi excluído do repositório.
+* **Limpeza do Build System (`CMakeLists.txt`):**
+  A diretiva de empacotamento `install(FILES arkrc DESTINATION ${KDE_INSTALL_CONFDIR})` foi removida do arquivo de configuração do CMake. Isso otimiza o *build*, garantindo que o arquivo não seja mais compilado e distribuído nas futuras instalações.
+
+## Submissão e Merge Request (KDE Ark)
+
+A solução foi validada localmente, recompilando o projeto através do `cmake` e garantindo o comportamento esperado da interface sem depender de configurações globais de sistema, sendo posteriormente submetida ao repositório oficial.
+
+> **Status do MR:** https://invent.kde.org/utilities/ark/-/merge_requests/335
+
+![Print do Merge Request do Ark no GitLab](./assets/mr_ark.jpeg)
+
+---
+
+## Principais Aprendizados da Sprint
+
+* **Arquitetura e Integração:** Compreensão do ciclo de vida de uma imagem imutável (`mkosi`) e resolução preditiva de conflitos de dependências do Kernel.
+* **C++ & Qt:** Compreensão prática do ciclo de inicialização de janelas `KXmlGuiWindow` e manipulação de componentes visuais (`QMenuBar`).
+* **Sistemas de Build (CMake):** Entendimento de como o *build* orquestra o empacotamento e a alocação de arquivos no sistema operacional do usuário final.
+* **Engenharia de Software:** Aplicação do conceito de tratar a causa raiz (comportamento padrão via código) em vez de manter soluções paliativas (arquivos de configuração forçados no sistema).
