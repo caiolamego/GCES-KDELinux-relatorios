@@ -212,8 +212,6 @@ Consegui configurar o Docker para rodar nativamente com o sistema de arquivos BT
 
 Abri o MR no repositório oficial do KDE com uma descrição clara em inglês, vinculando a correção à *issue* original para que ela seja fechada automaticamente após a aprovação.
 
-> **Inserir print do Merge Request aberto no GitLab aqui**
-
 ![Print do Merge Request Aberto no KDE Invent](./assets/mr.jpeg)
 
 
