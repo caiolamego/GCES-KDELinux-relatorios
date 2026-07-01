@@ -281,11 +281,11 @@ Nessa sprint consegui contribuir em uma nova issue, que consiste em adicionar um
 
 | Data  | Atividade                                   | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status    |
 | ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
-| 06/06 | Mensagem no Matrix com dúvida em relação ao namespace do repositório do pacote (inicialmente criado no meu GitHub principal) | [Mensagem](./assets/question-stl-thumbnailer-namespace.png) | Esperando resposta |
+| 06/06 | Mensagem no Matrix com dúvida em relação ao namespace do repositório do pacote (inicialmente criado no meu GitHub principal) | Discussão | [Mensagem](./assets/question-stl-thumbnailer-namespace.png) | Esperando resposta |
 | 16/06 | Escolha de nova issue sem a tag `Newcomer` para contribuição (Some kind of "kde-linux-bug-report" tool that collects info automatically) | Discussão | [Issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547) | Concluído |
 | 16/06 | Comentário de interesse para entender o escopo da nova issue escolhida | Discussão | [Comentário na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547#note_1524234) | Concluído |
 | 17/06 | Resposta do mantenedor (Nate) explicando o escopo da nova issue escolhida e dando instruções para começar a contribuição | Discussão | [Comentário na issue](https://invent.kde.org/kde-linux/kde-linux/-/work_items/547#note_1525793) | Concluído |
-| 20/06 | Abertura do merge request (Add a bug report tool that collects essential info automatically) com a primeira implementação da nova issue escolhida | Código/Discussão | [Merge Request](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558) | Concluído |
+| 20/06 | Abertura do merge request (Add a bug report tool that collects essential info automatically) com a primeira implementação da nova issue escolhida | Código/Discussão | [Merge Request](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558), [Commit](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=37af324311be8a3bd7db5079a9ebd3b9796fced4) | Concluído |
 
 ### Detalhes da Sprint
 
@@ -313,3 +313,39 @@ Nessa sprint consegui contribuir em uma nova issue, que consiste em adicionar um
 
 ---
 
+## Sprint 5 - 21/06 - 01/07
+
+### Resumo da Sprint
+
+Nessa Sprint dei continuidade à contribuição da issue escolhida na Sprint anterior, realizando rodadas de feedback e ajustes na implementação da ferramenta que coleta informações e logs essenciais de um sistema KDE Linux automaticamente para auxiliar na abertura de issues e bugs, conforme o feedback recebido no merge request. Por fim, consegui que meu merge request fosse aprovado e a contribuição integrada ao projeto no fim da sprint.
+
+### Atividades Realizadas
+
+| Data  | Atividade                                   | Tipo | Link/Referência | Status    |
+| ----- | ------------------------------------------- | --------------------------------- | --------------- | --------- |
+| 26/06 | Review do mantecedor (Nate) no merge request (Add a bug report tool that collects essential info automatically) com feedbacks, ajustes nas mensagens para o user, permissões e renomeação do script | Discussão | [Thread 1](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533224), [Thread 2](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533225), [Thread 3](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533226), [Thread 4](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533227), [Thread 4](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533228), [Thread 5](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1533229) | Concluído |
+| 27/06 | Ajustes no header do script, correção das mensagens, permissões corretas para o comando de `dmsg` e renomeação do script para `kde-linux-collect-logs` | Código/Discussão | Commits: [Clarify bug-report messages and simplify collect header](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=495558b22d0dcd23e9cd405d303fbf189d0fa6ea), [Run dmesg via run0 so it can read the kernel buffer](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=bb03112ccf9cba83ebc96857fdc3e41613589cf0), [Strip ANSI escape codes from kscreen-doctor output](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=8ec828ff07b6cd06fe49a5d35fce6b3f9c649608), [Rename tool to kde-linux-collect-logs and point users to the tracker](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=ae49868bb462323592481aa1832e7d70ccaf72ef)  | Concluído |
+| 28/06 | Segunda revisão do mantenedor (Nate) com feedback e ajustes novamente no nome do script, alguns caracteres em formato UNIX e sanitização de informações sensíveis nos logs | Discussão | [Thread 1](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535104), [Thread 2](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535105), [Thread 3](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535106), [Thread 4](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535107), [Thread 5](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535108) | Concluído |
+| 29/06 | Ajustes no nome do script, sanitização de informações sensíveis nos logs e correção de caracteres em formato UNIX | Código/Discussão | Commits: [Making small corrections to messages and updating report name prefix to kde-linux-logs](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=db1a8e99d82bada187525e3d64d24acf7acc4adf), [Redact common identifiers from collected logs as a first pass](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=a5701fc2506fa9a3a5238814d4a80e58150cccad), [Rename tool to collect-logs](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=c66e2ff2ec3cfb52ac8d4b18bdda9d167323f5a2) | Concluído |
+| 30/06 | Último pequeno feedback sobre um bug na mensagem de execução do comando `dmsg` do script | Discussão | [Thread](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558#note_1535597) | Concluído |
+| 30/06 | Ajuste na mensagem de execução do comando `dmsg` do script | Código/Discussão | Commit: [Fix collect label showing the privilege wrapper instead of the command](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558/diffs?commit_id=85bc10da4e1ff63f6d5e270ab6d4f4538134085a) | Concluído |
+| 30/06 | MR aprovado pelo mantenedor (Nate) e mesclado no repositório do projeto | Discussão | [Merge Request](https://invent.kde.org/kde-linux/kde-linux/-/merge_requests/558) | Concluído |
+
+### Detalhes da Sprint
+
+### Maiores Avanços
+
+* Consegui que meu merge request sobre a implementação da ferramenta que coleta informações e logs essenciais de um sistema KDE Linux automaticamente para auxiliar na abertura de issues e bugs fosse aprovado e integrado ao projeto.
+* Consegui realizar rodadas de feedback com o mantenedor do projeto e ajustes na implementação da ferramenta, conforme o feedback recebido no merge request, garantindo que a contribuição estivesse alinhada com as expectativas e atendendo aos requisitos técnicos necessários para a integração da ferramenta no KDE Linux.
+* Com a aprovação do merge request, consegui uma menção no post "This Month in KDE Linux" de junho, escrito pelo Nate (mantenedor).
+
+### Maiores Dificuldades
+
+* Não consegui progredir com a issue original sobre o empacotamento do STL thumbnailer.
+* Iterar sobre as correções e ajustes necessários para a integração da ferramenta no KDE Linux, conforme o feedback recebido no merge request, exigiu que o build fosse feito localmente para testar as alterações, o que demandou tempo e esforço.
+
+### Aprendizados
+
+* **Iteração sobre feedbacks para melhoria da contribuição**: Aprendi a importância de iterar sobre os feedbacks recebidos no merge request para melhorar a contribuição e garantir que ela esteja alinhada com as expectativas do projeto.
+* **Realizar testes locais para validar as alterações**: É fundamental realizar testes locais para validar as alterações feitas na implementação da ferramenta, garantindo que ela esteja funcionando corretamente.
+* **Importância de manter uma comunicação clara e frequente com os mantenedores do projeto**: Aprendi que manter uma comunicação clara e frequente com os mantenedores do projeto é fundamental para garantir que a contribuição esteja de acordo.
