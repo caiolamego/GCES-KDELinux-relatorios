@@ -1,0 +1,1109 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../sprint3/">
+      
+      
+        <link rel="next" href="../sprint5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Sprint 4 - GCES KDE Linux Relatórios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relatorio-de-contribuicao-sprint-4" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="GCES KDE Linux Relatórios" class="md-header__button md-logo" aria-label="GCES KDE Linux Relatórios" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCES KDE Linux Relatórios
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprint 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GCES KDE Linux Relatórios" class="md-nav__button md-logo" aria-label="GCES KDE Linux Relatórios" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    GCES KDE Linux Relatórios
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprint0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprint1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprint2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprint3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos-da-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos da Sprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entregas-coletivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Entregas Coletivas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-maiores-avancos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Maiores Avanços
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-maiores-dificuldades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Maiores Dificuldades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-licoes-aprendidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lições Aprendidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-planejamento-para-a-proxima-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Planejamento para a Próxima Sprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprint5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuições individuais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuições individuais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/caiolamego/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caio Lamego
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/victoriolazaro/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Victório Lázaro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/joaopedro/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    João Pedro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/diegocarlito/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diego Carlito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/joaocapozzi/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    João Capozzi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/felipeamorim/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Felipe Amorim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/renanlacerda/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Renan Lacerda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicoes_individuais/arthurgomes/diarioDeBordo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arthur Gomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos-da-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos da Sprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entregas-coletivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Entregas Coletivas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-maiores-avancos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Maiores Avanços
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-maiores-dificuldades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Maiores Dificuldades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-licoes-aprendidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lições Aprendidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-planejamento-para-a-proxima-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Planejamento para a Próxima Sprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="relatorio-de-contribuicao-sprint-4">Relatório de Contribuição – Sprint 4</h1>
+<p><strong>Disciplina:</strong> Gestão de Configuração e Evolução de Software<br />
+<strong>Equipe:</strong> KDE Linux<br />
+<strong>Comunidade/Projeto de Software Livre:</strong> KDE Linux<br />
+<strong>Período da Sprint:</strong> 08/06/2026 - 22/06/2026</p>
+<h2 id="1-objetivos-da-sprint">1. Objetivos da Sprint</h2>
+<ul>
+<li>[x] Retomar issues bloqueadas por dependências de roadmap e avançar contribuições de código a nível de sistema operacional (kernel, hardware).</li>
+<li>[x] Buscar novas issues técnicas, mesmo sem a tag <code>Newcomer</code>, negociando o escopo diretamente com os mantenedores diante da escassez de tarefas simples.</li>
+<li>[x] Validar as implementações em ambiente isolado (VM/UEFI) antes da submissão dos Merge Requests.</li>
+<li>[x] Avaliar a viabilidade de contribuição contínua no KDE Linux e redirecionar esforços para o projeto individual alternativo da disciplina quando necessário.</li>
+</ul>
+<h2 id="2-entregas-coletivas">2. Entregas Coletivas</h2>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Contribuições na Sprint 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caio Lamego</strong></td>
+<td>Retomou a <strong>Issue #586</strong> (banner em <code>/etc/motd</code> explicando a integração com o Kapsule), bloqueada desde a Sprint 2 por dependência de roadmap; iniciou a injeção do arquivo via <code>mkosi.extra</code> e o mapeamento da licença no <code>REUSE.toml</code> para atender às políticas de licenciamento do projeto.</td>
+</tr>
+<tr>
+<td><strong>Diego Carlito</strong></td>
+<td>Assumiu a <strong>Issue #335</strong>, propondo um mecanismo para impedir a migração do sistema quando a máquina estiver rodando exclusivamente na bateria; estudou a leitura da classe <code>power_supply</code> do kernel Linux e iniciou o desenvolvimento do script Python de validação.</td>
+</tr>
+<tr>
+<td><strong>Felipe Amorim</strong></td>
+<td>Selecionou a <strong>Issue #547</strong> (ferramenta de coleta automática de informações e logs para abertura de bugs), aprovada pelo mantenedor Nate Graham mesmo sem a tag <code>Newcomer</code>; implementou a primeira versão e abriu o <strong>MR #558</strong>.</td>
+</tr>
+<tr>
+<td><strong>João Pedro</strong></td>
+<td>Trabalhou em duas frentes de arquitetura: a <strong>Issue #636</strong> (conflito de dependências do kernel na geração da imagem UKI) e uma issue de limpeza arquitetural do <strong>KDE Ark</strong> (poluição do diretório <code>/etc</code>); avançou a implementação e os testes locais em ambos os repositórios.</td>
+</tr>
+<tr>
+<td><strong>Victório Lázaro</strong></td>
+<td>Diante da baixa disponibilidade de issues no KDE Linux e da ausência de retorno em Merge Requests anteriores, redirecionou o foco para o projeto individual alternativo da disciplina (pipeline de dados não estruturados do setor habitacional), implementando a camada de coleta automatizada via <em>web scraping</em>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-maiores-avancos">3. Maiores Avanços</h2>
+<ul>
+<li><strong>Contribuições a Nível de Sistema Operacional:</strong> A equipe avançou de scripts de conveniência e documentação para intervenções diretas na arquitetura do sistema — leitura de hardware (bateria), geração de imagens de boot (UKI) e injeção de arquivos estáticos via <code>mkosi.extra</code>.</li>
+<li><strong>Negociação de Escopo Fora de Issues <code>Newcomer</code>:</strong> Felipe conseguiu autorização direta de um mantenedor para trabalhar em uma issue de maior complexidade, mesmo sem a tag destinada a novatos, evidenciando maturidade na comunicação com a comunidade.</li>
+<li><strong>Contribuição em Repositórios do Ecossistema KDE:</strong> João Pedro expandiu a atuação da equipe para além do <code>kde-linux</code>, propondo uma refatoração C++/CMake diretamente no repositório da aplicação KDE Ark.</li>
+<li><strong>Aplicação de Mentoria Recebida em Sprints Anteriores:</strong> Caio colocou em prática a orientação recebida do mantenedor Hadi Chokr na Sprint 2 sobre o uso do <code>mkosi.extra</code> para injeção de arquivos no sistema base.</li>
+<li><strong>Decisão Estratégica de Redirecionamento:</strong> Victório identificou precocemente os obstáculos de contribuição no KDE Linux e realocou seus esforços para uma entrega alternativa com maior potencial de conclusão dentro do prazo da disciplina.</li>
+</ul>
+<h2 id="4-maiores-dificuldades">4. Maiores Dificuldades</h2>
+<ul>
+<li><strong>Escassez Persistente de Issues:</strong> A quantidade reduzida de tarefas <code>Newcomer</code> disponíveis e a alta concorrência (interna e externa) continuaram limitando as opções de contribuição direta.</li>
+<li><strong>Ausência de Feedback em MRs Anteriores:</strong> Merge Requests já aprovados no pipeline de CI (ex.: MR !101 do Caio) seguiram sem resposta dos mantenedores, dificultando o planejamento de novas entregas.</li>
+<li><strong>Complexidade Técnica Elevada:</strong> As issues remanescentes exigiram conhecimento aprofundado de áreas específicas — leitura de dados de hardware via kernel, políticas de licenciamento REUSE/SPDX e refatoração C++/Qt em um segundo repositório do ecossistema.</li>
+<li><strong>Robustez em Ambientes Heterogêneos:</strong> Garantir que o script de validação de energia não falhasse em ambientes sem bateria (desktops, hypervisors) exigiu cuidado extra na lógica de <em>fallback</em>.</li>
+<li><strong>Pressão de Prazo:</strong> A proximidade do encerramento da disciplina intensificou a necessidade de concluir entregas técnicas em paralelo.</li>
+</ul>
+<h2 id="5-licoes-aprendidas">5. Lições Aprendidas</h2>
+<ul>
+<li><strong>Injeção de Arquivos Estáticos via <code>mkosi.extra</code>:</strong> Sistemas base imutáveis permitem a inclusão de arquivos de configuração sem a necessidade de scripts complexos de pós-instalação.</li>
+<li><strong>Licenciamento como Parte do CI/CD:</strong> No KDE Linux, a pipeline falha caso qualquer arquivo não possua uma licença declarada (<code>REUSE.toml</code>), reforçando a importância de tratar conformidade de licenciamento como parte do processo de build.</li>
+<li><strong>Contribuição Além do Repositório Principal:</strong> É possível e válido contribuir com repositórios upstream relacionados (como o KDE Ark) quando uma dívida técnica impacta diretamente a experiência do sistema operacional.</li>
+<li><strong>Tratar a Causa Raiz:</strong> Preferir soluções que corrijam o comportamento padrão via código a manter <em>workarounds</em> baseados em arquivos de configuração forçados no sistema.</li>
+<li><strong>Saber Quando Pivotar:</strong> Diante de bloqueios recorrentes de disponibilidade e retorno em um projeto Open Source, redirecionar esforços para uma entrega alternativa viável é uma decisão estratégica válida.</li>
+</ul>
+<h2 id="6-planejamento-para-a-proxima-sprint">6. Planejamento para a Próxima Sprint</h2>
+<ul>
+<li>[ ] Finalizar e submeter os Merge Requests em desenvolvimento (Issues #586, #335, UKI e KDE Ark).</li>
+<li>[ ] Responder às rodadas de <em>code review</em> dos mantenedores e aplicar os ajustes solicitados.</li>
+<li>[ ] Concluir a implementação do projeto individual alternativo (extração semântica, contrato semântico e API).</li>
+<li>[ ] Consolidar os aprendizados finais e preparar o encerramento da documentação da disciplina.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
