@@ -263,8 +263,40 @@ ALém disso, o pipeline continuou passando corretamente, conforme previsto:
 
 ##### Plano Pessoal para a Próxima Sprint
 
-* [ ] Acompanhar a pipeline e o processo de revisão do Merge Request !101.
+* [x] Acompanhar a pipeline e o processo de revisão do Merge Request !101.
 * [ ] Responder aos comentários dos mantenedores e aplicar eventuais ajustes solicitados.
 * [ ] Marcar as discussões como resolvidas após implementar as correções.
-* [ ] Acompanhar a configuração da variável `MATRIX_WEBHOOK_URL` no projeto oficial.
+* [x] Acompanhar a configuração da variável `MATRIX_WEBHOOK_URL` no projeto oficial.
 * [ ] Registrar o resultado final do Merge Request, incluindo sua aprovação ou integração ao repositório.
+
+
+#### Sprint 4
+
+##### Resumo da Sprint
+Nesta sprint, na reta final da disciplina, o foco foi a retomada e implementação definitiva da **Issue #586: "Add a /etc/motd on the base OS explaining that most stuff is in Kapsule"**. Anteriormente (na Sprint 2), essa issue havia sido bloqueada por uma dependência de roadmap (Issue #584). Com a necessidade de consolidar as contribuições práticas e o avanço da integração do Kapsule, realizei a injeção do Message of the Day (MOTD) no sistema base utilizando o `mkosi`, além de adequar o novo arquivo às políticas estritas de licenciamento do repositório (REUSE) para garantir a aprovação no pipeline de CI/CD.
+
+Além disso, a issue trabalhada anteriormente (Issue #21) foi concluída com sucesso, porém o Merge Request !101 não obteve resposta nem comentário dos mantenedores, mesmo após a aprovação do pipeline. A sprint foi finalizada com a submissão do Merge Request final da Issue #586, aguardando a revisão e aprovação da comunidade.
+
+##### Atividades Realizadas
+| Data | Atividade | Tipo | Status |
+|---|---|---|---|
+| 01/07/2026 | Injeção do arquivo `motd` no diretório `mkosi.extra/etc/` | Código | Concluído |
+| 01/07/2026 | Configuração de autoria e licença (CC0-1.0) no `REUSE.toml` | Configuração/CI | Concluído |
+| 01/07/2026 | Testes do linting de licenças e validação da compilação | Testes | Concluído |
+| 01/07/2026 | Abertura do Merge Request final | Código | Concluído |
+
+##### Maiores Avanços
+* **Domínio do mkosi.extra:** Pude aplicar na prática a orientação recebida do desenvolvedor Hadi Chokr na Sprint 2. Compreendi que arquivos estáticos do sistema base são injetados pela pasta `mkosi.extra`, sem necessidade de scripts complexos de pós-instalação. Criei o caminho e o arquivo `mkosi.extra/etc/motd` com a mensagem de alerta sobre o ambiente Kapsule.
+* **Integração com o REUSE (CI/CD):** Um grande avanço técnico foi entender o funcionamento do `reuse-lint` no pipeline do GitLab da KDE. Em projetos normais, um simples arquivo de texto como o MOTD passaria despercebido. No KDE Linux, a pipeline falha caso qualquer arquivo não possua uma licença declarada. Consegui resolver isso atualizando o arquivo `REUSE.toml` na raiz do projeto, mapeando o `motd` sob a licença `CC0-1.0`.
+
+##### Maiores Dificuldades
+* **Gerenciamento de Tempo e Pressão:** A principal dificuldade foi lidar com o prazo curto para o fechamento da disciplina (GCES) e a necessidade de entregar um código funcional diante da falta de issues.
+* **Adequação Silenciosa de Infraestrutura:** Entender por que a pipeline quebrava inicialmente devido à falta de declaração SPDX em um simples arquivo `.txt` exigiu uma leitura rápida, porém atenta, das políticas de licenciamento (REUSE) exigidas pela infraestrutura do KDE.
+
+##### Aprendizados
+* **Fechamento de Ciclo:** Vivenciei o ciclo completo: prospectar a issue, ser bloqueado por dependências, aprender a arquitetura (`mkosi`), retomar a issue no momento adequado e finalmente submeter o *Merge Request* com a solução completa.
+
+##### Plano Pessoal para o Encerramento
+* [ ] Acompanhar a aprovação final e o *merge* do MR da Issue #586.
+* [ ] Consolidar os aprendizados em uma apresentação final clara e estruturada para a disciplina de GCES.
+* [ ] Finalizar e revisar a formatação de todo o Diário de Bordo.
